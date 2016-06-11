@@ -70,7 +70,6 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
         userCashBalanceLabel.text = "통장 잔고"
         userDailyProfitLabel.text = "일일 수익"
         userPropertyValueLabel.text = "건물 규모"
-        
     }
     
     func fetchProfile() {

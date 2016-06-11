@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3B09682B1D0C7EF70097A10A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09682A1D0C7EF70097A10A /* UserInfo.swift */; };
+		3B0968301D0C88750097A10A /* NearPropertiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09682F1D0C88750097A10A /* NearPropertiesTableViewController.swift */; };
+		3B0968321D0C89A70097A10A /* NearPropertiesCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0968311D0C89A70097A10A /* NearPropertiesCellViewController.swift */; };
 		3BAE12EC1D0C46D6006AE865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE12EB1D0C46D6006AE865 /* AppDelegate.swift */; };
 		3BAE12F11D0C46D6006AE865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE12EF1D0C46D6006AE865 /* Main.storyboard */; };
 		3BAE12F31D0C46D6006AE865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE12F21D0C46D6006AE865 /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		3533B4CA7F97CD987CD93B96 /* Pods-GoldSpoon_Tycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldSpoon_Tycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon.debug.xcconfig"; sourceTree = "<group>"; };
 		3B09682A1D0C7EF70097A10A /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3B09682F1D0C88750097A10A /* NearPropertiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearPropertiesTableViewController.swift; sourceTree = "<group>"; };
+		3B0968311D0C89A70097A10A /* NearPropertiesCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearPropertiesCellViewController.swift; sourceTree = "<group>"; };
 		3BAE12E81D0C46D6006AE865 /* GoldSpoon_Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldSpoon_Tycoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAE12EB1D0C46D6006AE865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BAE12F01D0C46D6006AE865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B09682C1D0C87F10097A10A /* NearProperties */ = {
+			isa = PBXGroup;
+			children = (
+				3B09682F1D0C88750097A10A /* NearPropertiesTableViewController.swift */,
+				3B0968311D0C89A70097A10A /* NearPropertiesCellViewController.swift */,
+			);
+			name = NearProperties;
+			sourceTree = "<group>";
+		};
 		3BAE12DF1D0C46D6006AE865 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +100,7 @@
 				3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */,
 				3BAE12EF1D0C46D6006AE865 /* Main.storyboard */,
 				3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */,
+				3B09682C1D0C87F10097A10A /* NearProperties */,
 				3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */,
 				3B09682A1D0C7EF70097A10A /* UserInfo.swift */,
 			);
@@ -252,7 +266,9 @@
 				3B09682B1D0C7EF70097A10A /* UserInfo.swift in Sources */,
 				3BAE12EC1D0C46D6006AE865 /* AppDelegate.swift in Sources */,
 				3BAE13011D0C6776006AE865 /* UserInfoViewController.swift in Sources */,
+				3B0968301D0C88750097A10A /* NearPropertiesTableViewController.swift in Sources */,
 				3BAE12FF1D0C52FF006AE865 /* mainPageViewController.swift in Sources */,
+				3B0968321D0C89A70097A10A /* NearPropertiesCellViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.knu.Mendo.GoldSpoon-Tycoon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -398,6 +415,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.knu.Mendo.GoldSpoon-Tycoon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
