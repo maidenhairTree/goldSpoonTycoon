@@ -9,13 +9,24 @@
 import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
+import Alamofire
+import SwiftyJSON
 
 class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
 
-    @IBOutlet var userProfileImage: UIImageView!
     @IBOutlet var facebookLoginButton: FBSDKLoginButton!
+    
+    @IBOutlet var userProfileImage: UIImageView!
     @IBOutlet var userNameLabel: UILabel!
     
+
+    @IBOutlet var userTotalValueLabel: UILabel!
+    @IBOutlet var userCashBalanceLabel: UILabel!
+    @IBOutlet var userDailyProfitLabel: UILabel!
+    @IBOutlet var userPropertyValueLabel: UILabel!
+
+    
+    //처음 어플리케이션을 실행하였을 떄
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,8 +36,17 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("current token exist!")
             fetchProfile()
         }
+    }
+    
+    //페이지 뷰 컨트롤러를 이용해서 페이지를 넘길 때. 위의 viewDidLoad랑 작동을 다르게 해서 효율적으로 만들어야 함
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if FBSDKAccessToken.currentAccessToken() != nil{
+            print("current token exist!")
+            fetchProfile()
+        }
 
-        // Do any additional setup after loading the view.
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
@@ -46,9 +66,15 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         userProfileImage.image = UIImage(named: "Unknown_user")
         userNameLabel.text = "로그인 하세요"
+        userTotalValueLabel.text = "총 재산"
+        userCashBalanceLabel.text = "통장 잔고"
+        userDailyProfitLabel.text = "일일 수익"
+        userPropertyValueLabel.text = "건물 규모"
+        
     }
     
     func fetchProfile() {
+        //Facebook Request
         let parameters = ["fields" : "email, first_name, last_name, picture.type(large)"]
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler({ (connection, user, requestError) -> Void in
             
@@ -60,18 +86,38 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             let userProfilePictureURL: String = (user.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
             let userFirstName: String = (user.objectForKey("first_name") as? String)!
             let userLastName: String = (user.objectForKey("last_name") as? String)!
+            UserInfo.email = (user.objectForKey("email") as? String)!
             
             self.userProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: userProfilePictureURL)!)!)
             self.userNameLabel.text = "\(userLastName) \(userFirstName)"
-        
+            
+            //Server Request
+            Alamofire.request(.GET, "http://localhost:8080/user/"+UserInfo.email)
+                .responseJSON { response in
+                    
+                    if let json = response.result.value {
+                        print("JSON: \(json)")
+                    }
+                    
+                    let jsonFromServer = JSON(data: response.data!)
+                    
+                    self.userTotalValueLabel.text = self.numberToWon(jsonFromServer["totalValue"].doubleValue)
+                    self.userCashBalanceLabel.text = self.numberToWon(jsonFromServer["cashBalance"].doubleValue)
+                    self.userDailyProfitLabel.text = self.numberToWon(jsonFromServer["dailyProfit"].doubleValue)
+                    self.userPropertyValueLabel.text = self.numberToWon(jsonFromServer["propertyValue"].doubleValue)
+            }
         })
         
+
     }
-
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func numberToWon(numberToChange: Double) -> String{
+        
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        
+        return numberFormatter.stringFromNumber(numberToChange)!+"원";
     }
+    
+    
 }

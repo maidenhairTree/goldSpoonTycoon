@@ -68,16 +68,52 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 재산" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-oh-VAw">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="통장 잔고" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-65-2Si">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일일 수익" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x6-wY-YL6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="건물 규모" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Q-Pe-yD6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="FTZ-65-2Si" firstAttribute="top" secondItem="ZuX-oh-VAw" secondAttribute="bottom" constant="8" id="2ZV-2s-5Ii"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y8Q-Pe-yD6" secondAttribute="trailing" id="501-1Y-c9E"/>
                             <constraint firstItem="jHH-Y2-e5y" firstAttribute="top" secondItem="B18-Ir-u5L" secondAttribute="bottom" constant="8" id="5qo-Wg-X4Y"/>
                             <constraint firstItem="kS6-dK-2uD" firstAttribute="top" secondItem="jHH-Y2-e5y" secondAttribute="bottom" constant="8" id="74q-pd-nA5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FTZ-65-2Si" secondAttribute="trailing" id="HO1-8b-BYc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZuX-oh-VAw" secondAttribute="trailing" id="IsQ-EP-gJ3"/>
                             <constraint firstItem="kS6-dK-2uD" firstAttribute="leading" secondItem="IoT-TT-nAw" secondAttribute="leadingMargin" constant="105" id="Jms-ad-j2f"/>
+                            <constraint firstItem="ZuX-oh-VAw" firstAttribute="top" secondItem="kS6-dK-2uD" secondAttribute="bottom" constant="95" id="NEp-1A-D5Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ujw-o0-nlc" secondAttribute="trailing" id="RId-FV-6A6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="FTZ-65-2Si" secondAttribute="leading" id="YRk-xJ-4bt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jHH-Y2-e5y" secondAttribute="trailing" constant="105" id="YVk-QA-5Ik"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kS6-dK-2uD" secondAttribute="trailing" constant="105" id="btI-2J-nNE"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Y8Q-Pe-yD6" secondAttribute="leading" id="c9g-ud-m5v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1x6-wY-YL6" secondAttribute="trailing" id="eY1-2D-HX7"/>
+                            <constraint firstItem="1x6-wY-YL6" firstAttribute="top" secondItem="FTZ-65-2Si" secondAttribute="bottom" constant="8" id="fjO-Ze-ZF6"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ZuX-oh-VAw" secondAttribute="leading" id="gei-HU-rsx"/>
+                            <constraint firstItem="Y8Q-Pe-yD6" firstAttribute="top" secondItem="1x6-wY-YL6" secondAttribute="bottom" constant="8" id="k8l-Ie-RaE"/>
                             <constraint firstItem="A6a-t9-CdO" firstAttribute="top" secondItem="Ujw-o0-nlc" secondAttribute="bottom" constant="20" id="sUb-1h-JCy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1x6-wY-YL6" secondAttribute="leading" id="tVq-ZB-GX1"/>
                             <constraint firstItem="jHH-Y2-e5y" firstAttribute="leading" secondItem="IoT-TT-nAw" secondAttribute="leadingMargin" constant="105" id="vJd-CH-OlO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ujw-o0-nlc" secondAttribute="leading" id="yLl-bP-Ae4"/>
                         </constraints>
@@ -86,6 +122,10 @@
                                 <exclude reference="jHH-Y2-e5y"/>
                                 <exclude reference="Ujw-o0-nlc"/>
                                 <exclude reference="kS6-dK-2uD"/>
+                                <exclude reference="ZuX-oh-VAw"/>
+                                <exclude reference="FTZ-65-2Si"/>
+                                <exclude reference="1x6-wY-YL6"/>
+                                <exclude reference="Y8Q-Pe-yD6"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5qo-Wg-X4Y"/>
@@ -94,6 +134,18 @@
                                 <exclude reference="74q-pd-nA5"/>
                                 <exclude reference="Jms-ad-j2f"/>
                                 <exclude reference="btI-2J-nNE"/>
+                                <exclude reference="IsQ-EP-gJ3"/>
+                                <exclude reference="NEp-1A-D5Z"/>
+                                <exclude reference="gei-HU-rsx"/>
+                                <exclude reference="2ZV-2s-5Ii"/>
+                                <exclude reference="HO1-8b-BYc"/>
+                                <exclude reference="YRk-xJ-4bt"/>
+                                <exclude reference="eY1-2D-HX7"/>
+                                <exclude reference="fjO-Ze-ZF6"/>
+                                <exclude reference="tVq-ZB-GX1"/>
+                                <exclude reference="501-1Y-c9E"/>
+                                <exclude reference="c9g-ud-m5v"/>
+                                <exclude reference="k8l-Ie-RaE"/>
                                 <exclude reference="RId-FV-6A6"/>
                                 <exclude reference="yLl-bP-Ae4"/>
                                 <exclude reference="sUb-1h-JCy"/>
@@ -104,6 +156,10 @@
                                 <include reference="jHH-Y2-e5y"/>
                                 <include reference="Ujw-o0-nlc"/>
                                 <include reference="kS6-dK-2uD"/>
+                                <include reference="ZuX-oh-VAw"/>
+                                <include reference="FTZ-65-2Si"/>
+                                <include reference="1x6-wY-YL6"/>
+                                <include reference="Y8Q-Pe-yD6"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5qo-Wg-X4Y"/>
@@ -112,6 +168,18 @@
                                 <include reference="74q-pd-nA5"/>
                                 <include reference="Jms-ad-j2f"/>
                                 <include reference="btI-2J-nNE"/>
+                                <include reference="IsQ-EP-gJ3"/>
+                                <include reference="NEp-1A-D5Z"/>
+                                <include reference="gei-HU-rsx"/>
+                                <include reference="2ZV-2s-5Ii"/>
+                                <include reference="HO1-8b-BYc"/>
+                                <include reference="YRk-xJ-4bt"/>
+                                <include reference="eY1-2D-HX7"/>
+                                <include reference="fjO-Ze-ZF6"/>
+                                <include reference="tVq-ZB-GX1"/>
+                                <include reference="501-1Y-c9E"/>
+                                <include reference="c9g-ud-m5v"/>
+                                <include reference="k8l-Ie-RaE"/>
                                 <include reference="RId-FV-6A6"/>
                                 <include reference="yLl-bP-Ae4"/>
                                 <include reference="sUb-1h-JCy"/>
@@ -120,8 +188,12 @@
                     </view>
                     <connections>
                         <outlet property="facebookLoginButton" destination="Ujw-o0-nlc" id="BZT-hy-8qP"/>
+                        <outlet property="userCashBalanceLabel" destination="FTZ-65-2Si" id="BuQ-xa-09y"/>
+                        <outlet property="userDailyProfitLabel" destination="1x6-wY-YL6" id="ihb-uv-wDn"/>
                         <outlet property="userNameLabel" destination="kS6-dK-2uD" id="s5N-OA-4CK"/>
                         <outlet property="userProfileImage" destination="jHH-Y2-e5y" id="ejl-Tb-JLb"/>
+                        <outlet property="userPropertyValueLabel" destination="Y8Q-Pe-yD6" id="e4S-Zq-b5b"/>
+                        <outlet property="userTotalValueLabel" destination="ZuX-oh-VAw" id="eJB-OC-Mfl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sG9-g3-2Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
