@@ -1,0 +1,6 @@
+framework module Pods_GoldSpoon_Tycoon {
+  umbrella header "Pods-GoldSpoon_Tycoon-umbrella.h"
+
+  export *
+  module * { export * }
+}
