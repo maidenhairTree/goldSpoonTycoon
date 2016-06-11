@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aMo-M9-9Hi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Info View Controller-->
+        <scene sceneID="cmi-0z-DFu">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C2f-Ru-fel" customClass="UserInfoViewController" customModule="GoldSpoon_Tycoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B18-Ir-u5L"/>
+                        <viewControllerLayoutGuide type="bottom" id="A6a-t9-CdO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IoT-TT-nAw">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown_user" translatesAutoresizingMaskIntoConstraints="NO" id="jHH-Y2-e5y">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7PS-rh-od0"/>
+                                    <constraint firstAttribute="height" constant="150" id="aUJ-zY-NJN"/>
+                                    <constraint firstAttribute="width" secondItem="jHH-Y2-e5y" secondAttribute="height" multiplier="1:1" id="cTe-Ak-ois"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7PS-rh-od0"/>
+                                        <exclude reference="aUJ-zY-NJN"/>
+                                        <exclude reference="cTe-Ak-ois"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7PS-rh-od0"/>
+                                        <include reference="aUJ-zY-NJN"/>
+                                        <exclude reference="cTe-Ak-ois"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jHH-Y2-e5y" firstAttribute="top" secondItem="B18-Ir-u5L" secondAttribute="bottom" constant="8" id="5qo-Wg-X4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jHH-Y2-e5y" secondAttribute="trailing" constant="105" id="YVk-QA-5Ik"/>
+                            <constraint firstItem="jHH-Y2-e5y" firstAttribute="leading" secondItem="IoT-TT-nAw" secondAttribute="leadingMargin" constant="105" id="vJd-CH-OlO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jHH-Y2-e5y"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5qo-Wg-X4Y"/>
+                                <exclude reference="YVk-QA-5Ik"/>
+                                <exclude reference="vJd-CH-OlO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jHH-Y2-e5y"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5qo-Wg-X4Y"/>
+                                <include reference="YVk-QA-5Ik"/>
+                                <include reference="vJd-CH-OlO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sG9-g3-2Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409.5" y="557.25"/>
+        </scene>
+        <!--Main Page View Controller-->
+        <scene sceneID="rlc-lr-g9C">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="aMo-M9-9Hi" customClass="mainPageViewController" customModule="GoldSpoon_Tycoon" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0D-hW-bzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409.5" y="-104.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vG9-8c-1jb">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CZF-cv-NRN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwx-RS-ms1"/>
+                        <viewControllerLayoutGuide type="bottom" id="T67-Y0-3ri"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M8J-0C-vlX">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.18471198589999999" blue="0.2445270591" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjY-vb-R6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367.5" y="557.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fse-7d-A5u">
+            <objects>
+                <viewController storyboardIdentifier="NearPropertiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Uy-zS-pGj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WDY-ap-hb5"/>
+                        <viewControllerLayoutGuide type="bottom" id="fhf-oP-L4Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hxh-dv-lbd">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.067908502529999998" green="1" blue="0.5709926514" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGj-Rs-430" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1150.5" y="557.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jv4-gC-XUq">
+            <objects>
+                <viewController storyboardIdentifier="PropertyRankViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HFy-1Y-X2t" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ic1-5p-jcZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="n0B-Wd-VtM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OFO-e5-XEV">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93187564410000001" green="1" blue="0.50171594779999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkl-jR-iq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1101" y="557.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Unknown_user" width="250" height="250"/>
+    </resources>
+</document>

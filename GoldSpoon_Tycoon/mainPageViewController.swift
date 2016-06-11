@@ -31,7 +31,7 @@ class mainPageViewController: UIPageViewController {
     private(set) lazy var orderedViewControllers: [UIViewController] = {
        return [self.newPagedViewController("PropertyRank"),
                self.newPagedViewController("MyProperties"),
-               self.newPagedViewController("MainPage"),
+               self.newPagedViewController("UserInfo"),
                self.newPagedViewController("NearProperties")]
     }()
     

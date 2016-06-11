@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BAE12EC1D0C46D6006AE865 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE12EB1D0C46D6006AE865 /* AppDelegate.swift */; };
+		3BAE12F11D0C46D6006AE865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE12EF1D0C46D6006AE865 /* Main.storyboard */; };
+		3BAE12F31D0C46D6006AE865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE12F21D0C46D6006AE865 /* Assets.xcassets */; };
+		3BAE12F61D0C46D6006AE865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */; };
+		3BAE12FF1D0C52FF006AE865 /* mainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */; };
+		3BAE13011D0C6776006AE865 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */; };
+		3BAE13081D0C6ACE006AE865 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13021D0C6ACE006AE865 /* Alamofire.framework */; };
+		3BAE13091D0C6ACE006AE865 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13031D0C6ACE006AE865 /* Bolts.framework */; };
+		3BAE130A1D0C6ACE006AE865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13041D0C6ACE006AE865 /* FBSDKCoreKit.framework */; };
+		3BAE130B1D0C6ACE006AE865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13051D0C6ACE006AE865 /* FBSDKLoginKit.framework */; };
+		3BAE130C1D0C6ACE006AE865 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13061D0C6ACE006AE865 /* FBSDKShareKit.framework */; };
+		3BAE130D1D0C6ACE006AE865 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13071D0C6ACE006AE865 /* SwiftyJSON.framework */; };
+		8B9D41284695A68BD1C435E2 /* Pods_GoldSpoon_Tycoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4630A275CA4A4D7C4C7CDC3E /* Pods_GoldSpoon_Tycoon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3533B4CA7F97CD987CD93B96 /* Pods-GoldSpoon_Tycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldSpoon_Tycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon.debug.xcconfig"; sourceTree = "<group>"; };
+		3BAE12E81D0C46D6006AE865 /* GoldSpoon_Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldSpoon_Tycoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAE12EB1D0C46D6006AE865 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BAE12F01D0C46D6006AE865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BAE12F21D0C46D6006AE865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BAE12F51D0C46D6006AE865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BAE12F71D0C46D6006AE865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainPageViewController.swift; sourceTree = "<group>"; };
+		3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		3BAE13021D0C6ACE006AE865 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/GoldSpoon_Tycoon-bljlikgmtlraznedvrbdmqhchgnf/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		3BAE13031D0C6ACE006AE865 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "Pods/../build/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		3BAE13041D0C6ACE006AE865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		3BAE13051D0C6ACE006AE865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		3BAE13061D0C6ACE006AE865 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
+		3BAE13071D0C6ACE006AE865 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/GoldSpoon_Tycoon-bljlikgmtlraznedvrbdmqhchgnf/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		4630A275CA4A4D7C4C7CDC3E /* Pods_GoldSpoon_Tycoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldSpoon_Tycoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A3CA27AEF17B9B0991A9F03 /* Pods-GoldSpoon_Tycoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldSpoon_Tycoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BAE12E51D0C46D6006AE865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAE13081D0C6ACE006AE865 /* Alamofire.framework in Frameworks */,
+				3BAE13091D0C6ACE006AE865 /* Bolts.framework in Frameworks */,
+				3BAE130A1D0C6ACE006AE865 /* FBSDKCoreKit.framework in Frameworks */,
+				3BAE130B1D0C6ACE006AE865 /* FBSDKLoginKit.framework in Frameworks */,
+				3BAE130C1D0C6ACE006AE865 /* FBSDKShareKit.framework in Frameworks */,
+				3BAE130D1D0C6ACE006AE865 /* SwiftyJSON.framework in Frameworks */,
+				8B9D41284695A68BD1C435E2 /* Pods_GoldSpoon_Tycoon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BAE12DF1D0C46D6006AE865 = {
+			isa = PBXGroup;
+			children = (
+				3BAE12EA1D0C46D6006AE865 /* GoldSpoon_Tycoon */,
+				3BAE12E91D0C46D6006AE865 /* Products */,
+				CF65382B2BB69BD3891E7D23 /* Pods */,
+				676FB6EE618505B51430D46F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BAE12E91D0C46D6006AE865 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BAE12E81D0C46D6006AE865 /* GoldSpoon_Tycoon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BAE12EA1D0C46D6006AE865 /* GoldSpoon_Tycoon */ = {
+			isa = PBXGroup;
+			children = (
+				3BAE12FD1D0C4DFB006AE865 /* Supporting files */,
+				3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */,
+				3BAE12EF1D0C46D6006AE865 /* Main.storyboard */,
+				3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */,
+				3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */,
+			);
+			path = GoldSpoon_Tycoon;
+			sourceTree = "<group>";
+		};
+		3BAE12FD1D0C4DFB006AE865 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				3BAE12EB1D0C46D6006AE865 /* AppDelegate.swift */,
+				3BAE12F71D0C46D6006AE865 /* Info.plist */,
+				3BAE12F21D0C46D6006AE865 /* Assets.xcassets */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		676FB6EE618505B51430D46F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BAE13021D0C6ACE006AE865 /* Alamofire.framework */,
+				3BAE13031D0C6ACE006AE865 /* Bolts.framework */,
+				3BAE13041D0C6ACE006AE865 /* FBSDKCoreKit.framework */,
+				3BAE13051D0C6ACE006AE865 /* FBSDKLoginKit.framework */,
+				3BAE13061D0C6ACE006AE865 /* FBSDKShareKit.framework */,
+				3BAE13071D0C6ACE006AE865 /* SwiftyJSON.framework */,
+				4630A275CA4A4D7C4C7CDC3E /* Pods_GoldSpoon_Tycoon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF65382B2BB69BD3891E7D23 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3533B4CA7F97CD987CD93B96 /* Pods-GoldSpoon_Tycoon.debug.xcconfig */,
+				8A3CA27AEF17B9B0991A9F03 /* Pods-GoldSpoon_Tycoon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BAE12E71D0C46D6006AE865 /* GoldSpoon_Tycoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BAE12FA1D0C46D6006AE865 /* Build configuration list for PBXNativeTarget "GoldSpoon_Tycoon" */;
+			buildPhases = (
+				3A1267B0E94E79975DAB1A98 /* 📦 Check Pods Manifest.lock */,
+				3BAE12E41D0C46D6006AE865 /* Sources */,
+				3BAE12E51D0C46D6006AE865 /* Frameworks */,
+				3BAE12E61D0C46D6006AE865 /* Resources */,
+				532400F4BB990544AD27D846 /* 📦 Embed Pods Frameworks */,
+				44F57CE5A930E66CA2DFEED1 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldSpoon_Tycoon;
+			productName = GoldSpoon_Tycoon;
+			productReference = 3BAE12E81D0C46D6006AE865 /* GoldSpoon_Tycoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BAE12E01D0C46D6006AE865 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Mendo;
+				TargetAttributes = {
+					3BAE12E71D0C46D6006AE865 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = E6Q9L6PMRM;
+					};
+				};
+			};
+			buildConfigurationList = 3BAE12E31D0C46D6006AE865 /* Build configuration list for PBXProject "GoldSpoon_Tycoon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BAE12DF1D0C46D6006AE865;
+			productRefGroup = 3BAE12E91D0C46D6006AE865 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BAE12E71D0C46D6006AE865 /* GoldSpoon_Tycoon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BAE12E61D0C46D6006AE865 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAE12F61D0C46D6006AE865 /* LaunchScreen.storyboard in Resources */,
+				3BAE12F31D0C46D6006AE865 /* Assets.xcassets in Resources */,
+				3BAE12F11D0C46D6006AE865 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A1267B0E94E79975DAB1A98 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44F57CE5A930E66CA2DFEED1 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		532400F4BB990544AD27D846 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BAE12E41D0C46D6006AE865 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAE12EC1D0C46D6006AE865 /* AppDelegate.swift in Sources */,
+				3BAE13011D0C6776006AE865 /* UserInfoViewController.swift in Sources */,
+				3BAE12FF1D0C52FF006AE865 /* mainPageViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BAE12EF1D0C46D6006AE865 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BAE12F01D0C46D6006AE865 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BAE12F51D0C46D6006AE865 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BAE12F81D0C46D6006AE865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BAE12F91D0C46D6006AE865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BAE12FB1D0C46D6006AE865 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3533B4CA7F97CD987CD93B96 /* Pods-GoldSpoon_Tycoon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKLoginKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKShareKit",
+				);
+				INFOPLIST_FILE = GoldSpoon_Tycoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.knu.Mendo.GoldSpoon-Tycoon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3BAE12FC1D0C46D6006AE865 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A3CA27AEF17B9B0991A9F03 /* Pods-GoldSpoon_Tycoon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Bolts",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKLoginKit",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKShareKit",
+				);
+				INFOPLIST_FILE = GoldSpoon_Tycoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.knu.Mendo.GoldSpoon-Tycoon";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BAE12E31D0C46D6006AE865 /* Build configuration list for PBXProject "GoldSpoon_Tycoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BAE12F81D0C46D6006AE865 /* Debug */,
+				3BAE12F91D0C46D6006AE865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BAE12FA1D0C46D6006AE865 /* Build configuration list for PBXNativeTarget "GoldSpoon_Tycoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BAE12FB1D0C46D6006AE865 /* Debug */,
+				3BAE12FC1D0C46D6006AE865 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BAE12E01D0C46D6006AE865 /* Project object */;
+}
