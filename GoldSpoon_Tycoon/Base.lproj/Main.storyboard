@@ -46,12 +46,37 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-dK-2uD">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="YiX-If-P8Z"/>
+                                    <constraint firstAttribute="height" constant="21" id="a4D-CY-uHc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YiX-If-P8Z"/>
+                                        <exclude reference="a4D-CY-uHc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="YiX-If-P8Z"/>
+                                        <include reference="a4D-CY-uHc"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jHH-Y2-e5y" firstAttribute="top" secondItem="B18-Ir-u5L" secondAttribute="bottom" constant="8" id="5qo-Wg-X4Y"/>
+                            <constraint firstItem="kS6-dK-2uD" firstAttribute="top" secondItem="jHH-Y2-e5y" secondAttribute="bottom" constant="8" id="74q-pd-nA5"/>
+                            <constraint firstItem="kS6-dK-2uD" firstAttribute="leading" secondItem="IoT-TT-nAw" secondAttribute="leadingMargin" constant="105" id="Jms-ad-j2f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ujw-o0-nlc" secondAttribute="trailing" id="RId-FV-6A6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jHH-Y2-e5y" secondAttribute="trailing" constant="105" id="YVk-QA-5Ik"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kS6-dK-2uD" secondAttribute="trailing" constant="105" id="btI-2J-nNE"/>
                             <constraint firstItem="A6a-t9-CdO" firstAttribute="top" secondItem="Ujw-o0-nlc" secondAttribute="bottom" constant="20" id="sUb-1h-JCy"/>
                             <constraint firstItem="jHH-Y2-e5y" firstAttribute="leading" secondItem="IoT-TT-nAw" secondAttribute="leadingMargin" constant="105" id="vJd-CH-OlO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ujw-o0-nlc" secondAttribute="leading" id="yLl-bP-Ae4"/>
@@ -60,11 +85,15 @@
                             <mask key="subviews">
                                 <exclude reference="jHH-Y2-e5y"/>
                                 <exclude reference="Ujw-o0-nlc"/>
+                                <exclude reference="kS6-dK-2uD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5qo-Wg-X4Y"/>
                                 <exclude reference="YVk-QA-5Ik"/>
                                 <exclude reference="vJd-CH-OlO"/>
+                                <exclude reference="74q-pd-nA5"/>
+                                <exclude reference="Jms-ad-j2f"/>
+                                <exclude reference="btI-2J-nNE"/>
                                 <exclude reference="RId-FV-6A6"/>
                                 <exclude reference="yLl-bP-Ae4"/>
                                 <exclude reference="sUb-1h-JCy"/>
@@ -74,11 +103,15 @@
                             <mask key="subviews">
                                 <include reference="jHH-Y2-e5y"/>
                                 <include reference="Ujw-o0-nlc"/>
+                                <include reference="kS6-dK-2uD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5qo-Wg-X4Y"/>
                                 <include reference="YVk-QA-5Ik"/>
                                 <include reference="vJd-CH-OlO"/>
+                                <include reference="74q-pd-nA5"/>
+                                <include reference="Jms-ad-j2f"/>
+                                <include reference="btI-2J-nNE"/>
                                 <include reference="RId-FV-6A6"/>
                                 <include reference="yLl-bP-Ae4"/>
                                 <include reference="sUb-1h-JCy"/>
@@ -87,6 +120,7 @@
                     </view>
                     <connections>
                         <outlet property="facebookLoginButton" destination="Ujw-o0-nlc" id="BZT-hy-8qP"/>
+                        <outlet property="userNameLabel" destination="kS6-dK-2uD" id="s5N-OA-4CK"/>
                         <outlet property="userProfileImage" destination="jHH-Y2-e5y" id="ejl-Tb-JLb"/>
                     </connections>
                 </viewController>

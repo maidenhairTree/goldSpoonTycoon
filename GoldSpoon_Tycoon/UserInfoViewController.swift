@@ -14,6 +14,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet var userProfileImage: UIImageView!
     @IBOutlet var facebookLoginButton: FBSDKLoginButton!
+    @IBOutlet var userNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginManager.logOut()
         
         userProfileImage.image = UIImage(named: "Unknown_user")
-
+        userNameLabel.text = "로그인 하세요"
     }
     
     func fetchProfile() {
@@ -57,8 +58,11 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
             
             let userProfilePictureURL: String = (user.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
+            let userFirstName: String = (user.objectForKey("first_name") as? String)!
+            let userLastName: String = (user.objectForKey("last_name") as? String)!
             
             self.userProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: userProfilePictureURL)!)!)
+            self.userNameLabel.text = "\(userLastName) \(userFirstName)"
         
         })
         
