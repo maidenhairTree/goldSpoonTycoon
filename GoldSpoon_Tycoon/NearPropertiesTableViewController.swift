@@ -14,13 +14,14 @@ class NearPropertiesTableViewController: UITableViewController {
 
     var jsonFromServer: JSON = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         fetchNearProperties()
         
-        print("in near property first table view :" + UserInfo.email)
+         print("in near property first table view viewDidAppear:" + UserInfo.email)
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,7 +32,7 @@ class NearPropertiesTableViewController: UITableViewController {
         return 1
     }
     
-    //얘를 다이나믹하게 하면 될 듯.
+    //주변 건물의 수를 바탕으로 Cell 개수를 파악함
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let cellNumber = self.jsonFromServer["propertyList"].count
         return cellNumber
@@ -55,7 +56,7 @@ class NearPropertiesTableViewController: UITableViewController {
                 let path = tableView.indexPathForSelectedRow
                 let cell = tableView.cellForRowAtIndexPath(path!)
                 
-                destination.viaSegue = (cell?.textLabel?.text!)!
+                destination.propertyName = (cell?.textLabel?.text!)!
                 destination.jsonFromServer = jsonFromServer
                 destination.latitude = jsonFromServer["propertyList"][(path?.row)!]["latitude"].string!
                 destination.longitude = jsonFromServer["propertyList"][(path?.row)!]["longitude"].string!

@@ -85,6 +85,8 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             let userProfilePictureURL: String = (user.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as? String)!
             let userFirstName: String = (user.objectForKey("first_name") as? String)!
             let userLastName: String = (user.objectForKey("last_name") as? String)!
+            
+            //Static structure에 email 저장
             UserInfo.email = (user.objectForKey("email") as? String)!
             
             self.userProfileImage.image = UIImage(data: NSData(contentsOfURL: NSURL(string: userProfilePictureURL)!)!)
@@ -104,6 +106,8 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
                     self.userCashBalanceLabel.text = self.numberToWon(jsonFromServer["cashBalance"].doubleValue)
                     self.userDailyProfitLabel.text = self.numberToWon(jsonFromServer["dailyProfit"].doubleValue)
                     self.userPropertyValueLabel.text = self.numberToWon(jsonFromServer["propertyValue"].doubleValue)
+                    
+                    UserInfo.cashBalance = jsonFromServer["cashBalance"].doubleValue
             }
         })
         

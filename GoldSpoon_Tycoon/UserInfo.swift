@@ -10,4 +10,5 @@ import UIKit
 
 struct UserInfo {
     static var email = ""
+    static var cashBalance = 0.0
 }

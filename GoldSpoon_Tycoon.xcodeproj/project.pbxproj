@@ -100,8 +100,8 @@
 				3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */,
 				3BAE12EF1D0C46D6006AE865 /* Main.storyboard */,
 				3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */,
-				3B09682C1D0C87F10097A10A /* NearProperties */,
 				3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */,
+				3B09682C1D0C87F10097A10A /* NearProperties */,
 				3B09682A1D0C7EF70097A10A /* UserInfo.swift */,
 			);
 			path = GoldSpoon_Tycoon;

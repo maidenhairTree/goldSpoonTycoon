@@ -14,9 +14,12 @@ class NearPropertiesCellViewController: UIViewController {
 
     @IBOutlet var propertyNameLabel: UILabel!
     @IBOutlet var propertyCostLabel: UILabel!
+    @IBOutlet var dailyRentIncomeLabel: UILabel!
+    @IBOutlet var dailyManagementCostLabel: UILabel!
+ 
     
     //받아와서 저장할 변수
-    var viaSegue = ""
+    var propertyName = ""
     var jsonFromServer: JSON = []
     var latitude = ""
     var longitude = ""
@@ -25,13 +28,31 @@ class NearPropertiesCellViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        propertyNameLabel.text = propertyName
+        fetchPropertyCost()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func fetchPropertyCost(){
+        
+        Alamofire.request(.GET, "http://localhost:8080/population", parameters: ["latitude":latitude, "longitude":longitude])
+            .responseJSON { response in
+                
+                if let json = response.result.value {
+                    print("JSON: \(json)")
+                }
+                
+                var costInfoFromServer = JSON(data: response.data!)
+                self.propertyCostLabel.text = costInfoFromServer["totalPopulation"].stringValue
+                self.cost = costInfoFromServer["totalPopulation"].doubleValue
+        }
+        
+        
     }
 
 }
