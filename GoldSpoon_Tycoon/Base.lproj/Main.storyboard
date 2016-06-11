@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -16,6 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="A6a-t9-CdO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IoT-TT-nAw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Unknown_user" translatesAutoresizingMaskIntoConstraints="NO" id="jHH-Y2-e5y">
@@ -40,34 +42,53 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ujw-o0-nlc" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jHH-Y2-e5y" firstAttribute="top" secondItem="B18-Ir-u5L" secondAttribute="bottom" constant="8" id="5qo-Wg-X4Y"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ujw-o0-nlc" secondAttribute="trailing" id="RId-FV-6A6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jHH-Y2-e5y" secondAttribute="trailing" constant="105" id="YVk-QA-5Ik"/>
+                            <constraint firstItem="A6a-t9-CdO" firstAttribute="top" secondItem="Ujw-o0-nlc" secondAttribute="bottom" constant="20" id="sUb-1h-JCy"/>
                             <constraint firstItem="jHH-Y2-e5y" firstAttribute="leading" secondItem="IoT-TT-nAw" secondAttribute="leadingMargin" constant="105" id="vJd-CH-OlO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ujw-o0-nlc" secondAttribute="leading" id="yLl-bP-Ae4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="jHH-Y2-e5y"/>
+                                <exclude reference="Ujw-o0-nlc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="5qo-Wg-X4Y"/>
                                 <exclude reference="YVk-QA-5Ik"/>
                                 <exclude reference="vJd-CH-OlO"/>
+                                <exclude reference="RId-FV-6A6"/>
+                                <exclude reference="yLl-bP-Ae4"/>
+                                <exclude reference="sUb-1h-JCy"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="jHH-Y2-e5y"/>
+                                <include reference="Ujw-o0-nlc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="5qo-Wg-X4Y"/>
                                 <include reference="YVk-QA-5Ik"/>
                                 <include reference="vJd-CH-OlO"/>
+                                <include reference="RId-FV-6A6"/>
+                                <include reference="yLl-bP-Ae4"/>
+                                <include reference="sUb-1h-JCy"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="Ujw-o0-nlc" id="BZT-hy-8qP"/>
+                        <outlet property="userProfileImage" destination="jHH-Y2-e5y" id="ejl-Tb-JLb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sG9-g3-2Ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,6 +111,7 @@
                         <viewControllerLayoutGuide type="bottom" id="T67-Y0-3ri"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M8J-0C-vlX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.18471198589999999" blue="0.2445270591" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -107,6 +129,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fhf-oP-L4Z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hxh-dv-lbd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.067908502529999998" green="1" blue="0.5709926514" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -124,6 +147,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n0B-Wd-VtM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OFO-e5-XEV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93187564410000001" green="1" blue="0.50171594779999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
