@@ -297,12 +297,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIQ-fj-LVD">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="구매"/>
+                                <connections>
+                                    <action selector="buyBotton" destination="gdm-w7-CSv" eventType="touchUpInside" id="XH5-MV-n70"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="RQX-aZ-9C4" firstAttribute="top" secondItem="IiG-Qu-0uB" secondAttribute="bottom" constant="94" id="0Yc-ty-mrl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sLV-Tu-Hnd" secondAttribute="trailing" id="1PW-WX-Tqo"/>
                             <constraint firstItem="39p-cS-Ewj" firstAttribute="top" secondItem="sLV-Tu-Hnd" secondAttribute="bottom" constant="8" id="2ae-rt-wgt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WIQ-fj-LVD" secondAttribute="trailing" id="41z-u7-7fv"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RQX-aZ-9C4" secondAttribute="leading" id="4Vi-Eh-Ra7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IKS-VA-fwj" secondAttribute="trailing" id="4i6-l0-e7e"/>
                             <constraint firstAttribute="leadingMargin" secondItem="IKS-VA-fwj" secondAttribute="leading" id="97P-eC-FrE"/>
@@ -311,6 +319,9 @@
                             <constraint firstItem="IiG-Qu-0uB" firstAttribute="leading" secondItem="KuT-G3-rl0" secondAttribute="leadingMargin" constant="130" id="H5g-Iv-CyJ"/>
                             <constraint firstItem="IKS-VA-fwj" firstAttribute="top" secondItem="RQX-aZ-9C4" secondAttribute="bottom" constant="8" id="H8E-Q9-guq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="39p-cS-Ewj" secondAttribute="leading" id="Qnw-OZ-BUx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WIQ-fj-LVD" secondAttribute="leading" id="TJM-W6-ZdU"/>
+                            <constraint firstItem="WIQ-fj-LVD" firstAttribute="centerY" secondItem="39p-cS-Ewj" secondAttribute="centerY" id="WQE-jA-SgL"/>
+                            <constraint firstItem="WIQ-fj-LVD" firstAttribute="leading" secondItem="sLV-Tu-Hnd" secondAttribute="trailing" constant="-360" id="bTs-F1-aTR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="39p-cS-Ewj" secondAttribute="trailing" id="cLg-rc-ZdJ"/>
                             <constraint firstItem="sLV-Tu-Hnd" firstAttribute="top" secondItem="IKS-VA-fwj" secondAttribute="bottom" constant="8" id="eWe-0b-8VY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RQX-aZ-9C4" secondAttribute="trailing" id="qT9-5z-KHd"/>
@@ -324,6 +335,7 @@
                                 <exclude reference="sLV-Tu-Hnd"/>
                                 <exclude reference="IiG-Qu-0uB"/>
                                 <exclude reference="39p-cS-Ewj"/>
+                                <exclude reference="WIQ-fj-LVD"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="EaM-Vz-BBp"/>
@@ -339,6 +351,10 @@
                                 <exclude reference="1PW-WX-Tqo"/>
                                 <exclude reference="eWe-0b-8VY"/>
                                 <exclude reference="zrp-Te-7uK"/>
+                                <exclude reference="41z-u7-7fv"/>
+                                <exclude reference="TJM-W6-ZdU"/>
+                                <exclude reference="WQE-jA-SgL"/>
+                                <exclude reference="bTs-F1-aTR"/>
                                 <exclude reference="2ae-rt-wgt"/>
                                 <exclude reference="Qnw-OZ-BUx"/>
                                 <exclude reference="cLg-rc-ZdJ"/>
@@ -351,6 +367,7 @@
                                 <include reference="sLV-Tu-Hnd"/>
                                 <include reference="IiG-Qu-0uB"/>
                                 <include reference="39p-cS-Ewj"/>
+                                <include reference="WIQ-fj-LVD"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="EaM-Vz-BBp"/>
@@ -366,6 +383,10 @@
                                 <include reference="1PW-WX-Tqo"/>
                                 <include reference="eWe-0b-8VY"/>
                                 <include reference="zrp-Te-7uK"/>
+                                <include reference="41z-u7-7fv"/>
+                                <include reference="TJM-W6-ZdU"/>
+                                <include reference="WQE-jA-SgL"/>
+                                <include reference="bTs-F1-aTR"/>
                                 <include reference="2ae-rt-wgt"/>
                                 <include reference="Qnw-OZ-BUx"/>
                                 <include reference="cLg-rc-ZdJ"/>
@@ -373,6 +394,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="buyBottonLabel" destination="WIQ-fj-LVD" id="Hd8-B4-tBo"/>
                         <outlet property="categoryImageView" destination="IiG-Qu-0uB" id="Eyz-Jf-LrO"/>
                         <outlet property="dailyIncomeLabel" destination="sLV-Tu-Hnd" id="foP-TF-xQg"/>
                         <outlet property="ownerLabel" destination="39p-cS-Ewj" id="kxR-D3-hxa"/>
