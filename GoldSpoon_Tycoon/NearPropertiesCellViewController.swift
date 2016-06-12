@@ -16,6 +16,7 @@ class NearPropertiesCellViewController: UIViewController {
     @IBOutlet var propertyCostLabel: UILabel!
     @IBOutlet var dailyRentIncomeLabel: UILabel!
     @IBOutlet var dailyManagementCostLabel: UILabel!
+    @IBOutlet var categoryImageView: UIImageView!
  
     
     //받아와서 저장할 변수
@@ -25,11 +26,14 @@ class NearPropertiesCellViewController: UIViewController {
     var longitude = ""
     var address = ""
     var cost = 0.0
+    var imageURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         propertyNameLabel.text = propertyName
+        self.categoryImageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: imageURL)!)!)
+        
         fetchPropertyCost()
     }
 
@@ -48,8 +52,15 @@ class NearPropertiesCellViewController: UIViewController {
                 }
                 
                 var costInfoFromServer = JSON(data: response.data!)
-                self.propertyCostLabel.text = costInfoFromServer["totalPopulation"].stringValue
-                self.cost = costInfoFromServer["totalPopulation"].doubleValue
+                if costInfoFromServer["totalPopulation"].stringValue.isEmpty {
+                    self.propertyCostLabel.text = "100"
+                    self.cost = 100
+                }
+                else
+                {
+                    self.propertyCostLabel.text = costInfoFromServer["totalPopulation"].stringValue
+                    self.cost = costInfoFromServer["totalPopulation"].doubleValue
+                }
         }
         
         

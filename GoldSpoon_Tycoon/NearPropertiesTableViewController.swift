@@ -34,7 +34,7 @@ class NearPropertiesTableViewController: UITableViewController {
     
     //주변 건물의 수를 바탕으로 Cell 개수를 파악함
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let cellNumber = self.jsonFromServer["propertyList"].count
+        let cellNumber = self.jsonFromServer["placeList"].count
         return cellNumber
     }
     
@@ -42,7 +42,7 @@ class NearPropertiesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         
-        cell.textLabel?.text = self.jsonFromServer["propertyList"][indexPath.row]["name"].string
+        cell.textLabel?.text = self.jsonFromServer["placeList"][indexPath.row]["name"].string
         //cell.textLabel?.text = "Hello from cell #\(indexPath.row)"
         //셀 넘버에 따라서 제이슨 건물 목록 배열에 있는거 넘겨주면 될 듯 (셀 넘버 == 제이슨 배열 인덱스)
         
@@ -58,9 +58,10 @@ class NearPropertiesTableViewController: UITableViewController {
                 
                 destination.propertyName = (cell?.textLabel?.text!)!
                 destination.jsonFromServer = jsonFromServer
-                destination.latitude = jsonFromServer["propertyList"][(path?.row)!]["latitude"].string!
-                destination.longitude = jsonFromServer["propertyList"][(path?.row)!]["longitude"].string!
-                destination.address = jsonFromServer["propertyList"][(path?.row)!]["address"].string!
+                destination.latitude = jsonFromServer["placeList"][(path?.row)!]["latitude"].stringValue
+                destination.longitude = jsonFromServer["placeList"][(path?.row)!]["longitude"].stringValue
+                destination.address = jsonFromServer["placeList"][(path?.row)!]["address"].stringValue
+                destination.imageURL = jsonFromServer["placeList"][(path?.row)!]["icon"].stringValue
             }
         }
     }
