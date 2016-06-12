@@ -93,7 +93,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.userNameLabel.text = "\(userLastName) \(userFirstName)"
             
             //Server Request
-            Alamofire.request(.GET, "http://localhost:8080/user/"+UserInfo.email)
+            Alamofire.request(.GET, "http://localhost:8080/user/"+UserInfo.email, parameters: ["firstName":userFirstName, "lastName":userLastName])
                 .responseJSON { response in
                     
                     if let json = response.result.value {

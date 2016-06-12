@@ -41,10 +41,8 @@ class NearPropertiesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        
+        //(셀 넘버 == 제이슨 배열 인덱스)
         cell.textLabel?.text = self.jsonFromServer["placeList"][indexPath.row]["name"].string
-        //cell.textLabel?.text = "Hello from cell #\(indexPath.row)"
-        //셀 넘버에 따라서 제이슨 건물 목록 배열에 있는거 넘겨주면 될 듯 (셀 넘버 == 제이슨 배열 인덱스)
         
         return cell
     }
@@ -60,7 +58,7 @@ class NearPropertiesTableViewController: UITableViewController {
                 destination.icon = jsonFromServer["placeList"][(path?.row)!]["icon"].stringValue
                 destination.latitude = jsonFromServer["placeList"][(path?.row)!]["latitude"].stringValue
                 destination.longitude = jsonFromServer["placeList"][(path?.row)!]["longitude"].stringValue
-                destination.place_id = jsonFromServer["placeList"][(path?.row)!]["place_id"].stringValue
+                destination.id = jsonFromServer["placeList"][(path?.row)!]["place_id"].stringValue
                 destination.typeOne = jsonFromServer["placeList"][(path?.row)!]["typeOne"].stringValue
                 destination.typeTwo = jsonFromServer["placeList"][(path?.row)!]["typeTwo"].stringValue
                 destination.vincinity = jsonFromServer["placeList"][(path?.row)!]["vincinity"].stringValue
@@ -78,15 +76,12 @@ class NearPropertiesTableViewController: UITableViewController {
     
     func fetchNearProperties(){
         
-        Alamofire.request(.GET, "http://localhost:8080/nearProperties", parameters: ["latitude":"35.811844", "longitude":"128.5228247"])
+        Alamofire.request(.GET, "http://localhost:8080/properties/near", parameters: ["latitude":"35.811844", "longitude":"128.5228247"])
             .responseJSON { response in
                 
                 if let json = response.result.value {
                     print("JSON: \(json)")
                 }
-                
-//                UserInfo.latitude = "35.811844"
-//                UserInfo.longitude = "128.5228247"
                 
                 self.jsonFromServer = JSON(data: response.data!)
                 self.tableView.reloadData()

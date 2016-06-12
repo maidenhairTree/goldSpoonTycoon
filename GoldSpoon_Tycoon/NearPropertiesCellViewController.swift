@@ -14,9 +14,9 @@ class NearPropertiesCellViewController: UIViewController {
 
     @IBOutlet var propertyNameLabel: UILabel!
     @IBOutlet var propertyCostLabel: UILabel!
-    @IBOutlet var dailyRentIncomeLabel: UILabel!
-    @IBOutlet var dailyManagementCostLabel: UILabel!
+    @IBOutlet var dailyIncomeLabel: UILabel!
     @IBOutlet var categoryImageView: UIImageView!
+    @IBOutlet var ownerLabel: UILabel!
  
     var dailyCost = 0.0
     var dailyRent = 0.0
@@ -27,7 +27,7 @@ class NearPropertiesCellViewController: UIViewController {
     var latitude = ""
     var longitude = ""
     var name = ""
-    var place_id = ""
+    var id = ""
     var typeOne = ""
     var typeTwo = ""
     var vincinity = ""
@@ -38,12 +38,33 @@ class NearPropertiesCellViewController: UIViewController {
         propertyNameLabel.text = name
         self.categoryImageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: icon)!)!)
         
+        findIfPropertyIsSold()
         fetchPropertyCost()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func findIfPropertyIsSold() {
+        
+        Alamofire.request(.GET, "http://localhost:8080/properties/\(id)")
+            .responseJSON { response in
+                switch response.result {
+                case .Success:
+                    print("Validation Successful")
+                    if let json = response.result.value {
+                        print("JSON in findIfPropertyIsSold(): \(json)\n\(self.id)")
+                    }
+                    
+                    var isSoldResultJSON = JSON(data: response.data!)
+                    
+                    self.ownerLabel.text = isSoldResultJSON["ownerLastName"].stringValue + " " + isSoldResultJSON["ownerFirstName"].stringValue
+                case .Failure(_):
+                    print("no one bought this property : " + self.name)
+                }
+        }
     }
     
     func fetchPropertyCost(){
