@@ -326,22 +326,22 @@
                                 <exclude reference="IiG-Qu-0uB"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EaM-Vz-BBp"/>
-                                <exclude reference="H5g-Iv-CyJ"/>
-                                <exclude reference="wpx-2Q-v3W"/>
+                                <exclude reference="4i6-l0-e7e"/>
+                                <exclude reference="97P-eC-FrE"/>
+                                <exclude reference="H8E-Q9-guq"/>
                                 <exclude reference="0Yc-ty-mrl"/>
                                 <exclude reference="4Vi-Eh-Ra7"/>
                                 <exclude reference="DKp-5I-kiR"/>
                                 <exclude reference="qT9-5z-KHd"/>
-                                <exclude reference="4i6-l0-e7e"/>
-                                <exclude reference="97P-eC-FrE"/>
-                                <exclude reference="H8E-Q9-guq"/>
                                 <exclude reference="1PW-WX-Tqo"/>
                                 <exclude reference="eWe-0b-8VY"/>
                                 <exclude reference="zrp-Te-7uK"/>
                                 <exclude reference="62f-du-jS1"/>
                                 <exclude reference="Hmx-VY-VHk"/>
                                 <exclude reference="RvT-jJ-cO5"/>
+                                <exclude reference="EaM-Vz-BBp"/>
+                                <exclude reference="H5g-Iv-CyJ"/>
+                                <exclude reference="wpx-2Q-v3W"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -353,22 +353,22 @@
                                 <include reference="IiG-Qu-0uB"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EaM-Vz-BBp"/>
-                                <include reference="H5g-Iv-CyJ"/>
-                                <include reference="wpx-2Q-v3W"/>
+                                <include reference="4i6-l0-e7e"/>
+                                <include reference="97P-eC-FrE"/>
+                                <include reference="H8E-Q9-guq"/>
                                 <include reference="0Yc-ty-mrl"/>
                                 <include reference="4Vi-Eh-Ra7"/>
                                 <include reference="DKp-5I-kiR"/>
                                 <include reference="qT9-5z-KHd"/>
-                                <include reference="4i6-l0-e7e"/>
-                                <include reference="97P-eC-FrE"/>
-                                <include reference="H8E-Q9-guq"/>
                                 <include reference="1PW-WX-Tqo"/>
                                 <include reference="eWe-0b-8VY"/>
                                 <include reference="zrp-Te-7uK"/>
                                 <include reference="62f-du-jS1"/>
                                 <include reference="Hmx-VY-VHk"/>
                                 <include reference="RvT-jJ-cO5"/>
+                                <include reference="EaM-Vz-BBp"/>
+                                <include reference="H5g-Iv-CyJ"/>
+                                <include reference="wpx-2Q-v3W"/>
                             </mask>
                         </variation>
                     </view>

@@ -56,12 +56,14 @@ class NearPropertiesTableViewController: UITableViewController {
                 let path = tableView.indexPathForSelectedRow
                 let cell = tableView.cellForRowAtIndexPath(path!)
                 
-                destination.propertyName = (cell?.textLabel?.text!)!
-                destination.jsonFromServer = jsonFromServer
+                destination.name = (cell?.textLabel?.text!)!
+                destination.icon = jsonFromServer["placeList"][(path?.row)!]["icon"].stringValue
                 destination.latitude = jsonFromServer["placeList"][(path?.row)!]["latitude"].stringValue
                 destination.longitude = jsonFromServer["placeList"][(path?.row)!]["longitude"].stringValue
-                destination.address = jsonFromServer["placeList"][(path?.row)!]["address"].stringValue
-                destination.imageURL = jsonFromServer["placeList"][(path?.row)!]["icon"].stringValue
+                destination.place_id = jsonFromServer["placeList"][(path?.row)!]["place_id"].stringValue
+                destination.typeOne = jsonFromServer["placeList"][(path?.row)!]["typeOne"].stringValue
+                destination.typeTwo = jsonFromServer["placeList"][(path?.row)!]["typeTwo"].stringValue
+                destination.vincinity = jsonFromServer["placeList"][(path?.row)!]["vincinity"].stringValue
             }
         }
     }
