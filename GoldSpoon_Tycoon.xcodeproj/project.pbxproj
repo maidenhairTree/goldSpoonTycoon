@@ -75,6 +75,24 @@
 			name = NearProperties;
 			sourceTree = "<group>";
 		};
+		3B5950AB1D0EA84300AFD078 /* MyProperties */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MyProperties;
+			sourceTree = "<group>";
+		};
+		3B5950AC1D0EA86200AFD078 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */,
+				3BAE12EF1D0C46D6006AE865 /* Main.storyboard */,
+				3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */,
+				3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */,
+			);
+			name = MainPage;
+			sourceTree = "<group>";
+		};
 		3BAE12DF1D0C46D6006AE865 = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				3BAE12FD1D0C4DFB006AE865 /* Supporting files */,
-				3BAE12F41D0C46D6006AE865 /* LaunchScreen.storyboard */,
-				3BAE12EF1D0C46D6006AE865 /* Main.storyboard */,
-				3BAE12FE1D0C52FF006AE865 /* mainPageViewController.swift */,
-				3BAE13001D0C6776006AE865 /* UserInfoViewController.swift */,
+				3B5950AC1D0EA86200AFD078 /* MainPage */,
 				3B09682C1D0C87F10097A10A /* NearProperties */,
+				3B5950AB1D0EA84300AFD078 /* MyProperties */,
 				3B09682A1D0C7EF70097A10A /* UserInfo.swift */,
 			);
 			path = GoldSpoon_Tycoon;
@@ -395,7 +411,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.knu.Mendo.GoldSpoon-Tycoon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -415,7 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kr.ac.knu.Mendo.GoldSpoon-Tycoon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

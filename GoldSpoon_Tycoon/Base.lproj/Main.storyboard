@@ -200,6 +200,79 @@
             </objects>
             <point key="canvasLocation" x="409.5" y="557.25"/>
         </scene>
+        <!--내 소유 자산 목록-->
+        <scene sceneID="5oh-sn-H3Y">
+            <objects>
+                <tableViewController id="ycf-Rv-Gjq" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fTV-fk-Jtq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zd-5a-T5P" style="IBUITableViewCellStyleDefault" id="ciV-hr-vBc">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciV-hr-vBc" id="MYZ-iZ-lJq">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zd-5a-T5P">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ycf-Rv-Gjq" id="eNc-1Z-jKZ"/>
+                            <outlet property="delegate" destination="ycf-Rv-Gjq" id="FSK-25-Uad"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="내 소유 자산 목록" id="D1k-lE-hnl"/>
+                    <connections>
+                        <segue destination="jTA-4A-EYw" kind="show" identifier="MyPropertyTableToCell" id="NNT-zS-yiv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPe-Re-9Es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="1308"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vr3-x0-Rim">
+            <objects>
+                <viewController id="jTA-4A-EYw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r3e-c2-EuA"/>
+                        <viewControllerLayoutGuide type="bottom" id="b0V-jb-fzk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tLc-xa-wwZ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXD-te-fkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409.5" y="1308"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qEZ-e4-Kri">
+            <objects>
+                <navigationController storyboardIdentifier="MyPropertiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8Hj-8H-HFw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xfg-we-KQ7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ycf-Rv-Gjq" kind="relationship" relationship="rootViewController" id="tfC-jb-mnf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZo-lR-Vrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="557.25"/>
+        </scene>
         <!--주변 건물 목록-->
         <scene sceneID="zeG-WX-Ogr">
             <objects>
@@ -338,19 +411,6 @@
                                 <exclude reference="WIQ-fj-LVD"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EaM-Vz-BBp"/>
-                                <exclude reference="H5g-Iv-CyJ"/>
-                                <exclude reference="wpx-2Q-v3W"/>
-                                <exclude reference="0Yc-ty-mrl"/>
-                                <exclude reference="4Vi-Eh-Ra7"/>
-                                <exclude reference="DKp-5I-kiR"/>
-                                <exclude reference="qT9-5z-KHd"/>
-                                <exclude reference="4i6-l0-e7e"/>
-                                <exclude reference="97P-eC-FrE"/>
-                                <exclude reference="H8E-Q9-guq"/>
-                                <exclude reference="1PW-WX-Tqo"/>
-                                <exclude reference="eWe-0b-8VY"/>
-                                <exclude reference="zrp-Te-7uK"/>
                                 <exclude reference="41z-u7-7fv"/>
                                 <exclude reference="TJM-W6-ZdU"/>
                                 <exclude reference="WQE-jA-SgL"/>
@@ -358,6 +418,19 @@
                                 <exclude reference="2ae-rt-wgt"/>
                                 <exclude reference="Qnw-OZ-BUx"/>
                                 <exclude reference="cLg-rc-ZdJ"/>
+                                <exclude reference="4i6-l0-e7e"/>
+                                <exclude reference="97P-eC-FrE"/>
+                                <exclude reference="H8E-Q9-guq"/>
+                                <exclude reference="0Yc-ty-mrl"/>
+                                <exclude reference="4Vi-Eh-Ra7"/>
+                                <exclude reference="DKp-5I-kiR"/>
+                                <exclude reference="qT9-5z-KHd"/>
+                                <exclude reference="1PW-WX-Tqo"/>
+                                <exclude reference="eWe-0b-8VY"/>
+                                <exclude reference="zrp-Te-7uK"/>
+                                <exclude reference="EaM-Vz-BBp"/>
+                                <exclude reference="H5g-Iv-CyJ"/>
+                                <exclude reference="wpx-2Q-v3W"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -370,19 +443,6 @@
                                 <include reference="WIQ-fj-LVD"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EaM-Vz-BBp"/>
-                                <include reference="H5g-Iv-CyJ"/>
-                                <include reference="wpx-2Q-v3W"/>
-                                <include reference="0Yc-ty-mrl"/>
-                                <include reference="4Vi-Eh-Ra7"/>
-                                <include reference="DKp-5I-kiR"/>
-                                <include reference="qT9-5z-KHd"/>
-                                <include reference="4i6-l0-e7e"/>
-                                <include reference="97P-eC-FrE"/>
-                                <include reference="H8E-Q9-guq"/>
-                                <include reference="1PW-WX-Tqo"/>
-                                <include reference="eWe-0b-8VY"/>
-                                <include reference="zrp-Te-7uK"/>
                                 <include reference="41z-u7-7fv"/>
                                 <include reference="TJM-W6-ZdU"/>
                                 <include reference="WQE-jA-SgL"/>
@@ -390,6 +450,19 @@
                                 <include reference="2ae-rt-wgt"/>
                                 <include reference="Qnw-OZ-BUx"/>
                                 <include reference="cLg-rc-ZdJ"/>
+                                <include reference="4i6-l0-e7e"/>
+                                <include reference="97P-eC-FrE"/>
+                                <include reference="H8E-Q9-guq"/>
+                                <include reference="0Yc-ty-mrl"/>
+                                <include reference="4Vi-Eh-Ra7"/>
+                                <include reference="DKp-5I-kiR"/>
+                                <include reference="qT9-5z-KHd"/>
+                                <include reference="1PW-WX-Tqo"/>
+                                <include reference="eWe-0b-8VY"/>
+                                <include reference="zrp-Te-7uK"/>
+                                <include reference="EaM-Vz-BBp"/>
+                                <include reference="H5g-Iv-CyJ"/>
+                                <include reference="wpx-2Q-v3W"/>
                             </mask>
                         </variation>
                     </view>
@@ -432,24 +505,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G0D-hW-bzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="409.5" y="-104.25"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vG9-8c-1jb">
-            <objects>
-                <viewController storyboardIdentifier="MyPropertiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CZF-cv-NRN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iwx-RS-ms1"/>
-                        <viewControllerLayoutGuide type="bottom" id="T67-Y0-3ri"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="M8J-0C-vlX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.18471198589999999" blue="0.2445270591" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SjY-vb-R6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-367.5" y="557.25"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jv4-gC-XUq">
