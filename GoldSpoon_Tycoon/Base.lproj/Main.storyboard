@@ -203,17 +203,21 @@
         <!--내 소유 자산 목록-->
         <scene sceneID="5oh-sn-H3Y">
             <objects>
-                <tableViewController id="ycf-Rv-Gjq" sceneMemberID="viewController">
+                <tableViewController id="ycf-Rv-Gjq" customClass="MyPropertiesTableViewController" customModule="GoldSpoon_Tycoon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fTV-fk-Jtq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="0zd-5a-T5P" style="IBUITableViewCellStyleDefault" id="ciV-hr-vBc">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciV-hr-vBc" id="MYZ-iZ-lJq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0zd-5a-T5P">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -240,15 +244,16 @@
             </objects>
             <point key="canvasLocation" x="-345" y="1308"/>
         </scene>
-        <!--View Controller-->
+        <!--My Properties Cell View Controller-->
         <scene sceneID="vr3-x0-Rim">
             <objects>
-                <viewController id="jTA-4A-EYw" sceneMemberID="viewController">
+                <viewController id="jTA-4A-EYw" customClass="MyPropertiesCellViewController" customModule="GoldSpoon_Tycoon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r3e-c2-EuA"/>
                         <viewControllerLayoutGuide type="bottom" id="b0V-jb-fzk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tLc-xa-wwZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
