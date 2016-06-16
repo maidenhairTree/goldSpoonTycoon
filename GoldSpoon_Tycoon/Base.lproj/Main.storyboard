@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXD-te-fkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172.5" y="1293"/>
+            <point key="canvasLocation" x="409.5" y="1308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qEZ-e4-Kri">
@@ -328,10 +328,10 @@
         <scene sceneID="zeG-WX-Ogr">
             <objects>
                 <tableViewController id="whG-au-7tm" customClass="NearPropertiesTableViewController" customModule="GoldSpoon_Tycoon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHF-zM-5Wl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LHF-zM-5Wl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="GjL-2e-4vg" style="IBUITableViewCellStyleDefault" id="uuA-kT-HuM">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -355,6 +355,10 @@
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES"/>
                                 </accessibility>
+                                <connections>
+                                    <outlet property="accessoryView" destination="IRQ-lU-0bz" id="zkI-CP-enO"/>
+                                    <outlet property="backgroundView" destination="IRQ-lU-0bz" id="wE3-a6-G9W"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -369,6 +373,10 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF3-ik-aeo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="City.png" id="IRQ-lU-0bz">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="2035.5" y="557.25"/>
         </scene>
@@ -614,6 +622,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="City.png" width="400" height="800"/>
         <image name="Main.png" width="400" height="800"/>
         <image name="Ranking.jpeg" width="750" height="1344"/>
         <image name="Unknown_user" width="250" height="250"/>
