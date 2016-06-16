@@ -50,8 +50,8 @@ class NearPropertiesCellViewController: UIViewController {
     var typeTwo = ""
     var vincinity = ""
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         ownerLabel.hidden = true
         buyBottonLabel.hidden = true
@@ -60,7 +60,10 @@ class NearPropertiesCellViewController: UIViewController {
         self.categoryImageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: icon)!)!)
         
         findIfPropertyIsSold()
-        fetchPropertyCost()
+        
+        if value == 0.0 {
+            fetchPropertyCost()
+        }
     }
 
     override func didReceiveMemoryWarning() {
