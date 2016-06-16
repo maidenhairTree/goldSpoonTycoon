@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		036F20DC1D11A350005D4661 /* Main.png in Resources */ = {isa = PBXBuildFile; fileRef = 036F20DB1D11A350005D4661 /* Main.png */; };
+		038C6F8D1D1297A3005180D4 /* City.png in Resources */ = {isa = PBXBuildFile; fileRef = 038C6F8C1D1297A3005180D4 /* City.png */; };
+		03E3375E1D11967600D608BC /* Ranking.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 03E3375C1D11967600D608BC /* Ranking.jpeg */; };
 		3B09682B1D0C7EF70097A10A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09682A1D0C7EF70097A10A /* UserInfo.swift */; };
 		3B0968301D0C88750097A10A /* NearPropertiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09682F1D0C88750097A10A /* NearPropertiesTableViewController.swift */; };
 		3B0968321D0C89A70097A10A /* NearPropertiesCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0968311D0C89A70097A10A /* NearPropertiesCellViewController.swift */; };
@@ -29,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		036F20DB1D11A350005D4661 /* Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main.png; sourceTree = "<group>"; };
+		038C6F891D11B9A1005180D4 /* yangfont04.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yangfont04.ttf; sourceTree = "<group>"; };
+		038C6F8C1D1297A3005180D4 /* City.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = City.png; sourceTree = "<group>"; };
+		03E3375C1D11967600D608BC /* Ranking.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ranking.jpeg; sourceTree = "<group>"; };
 		3533B4CA7F97CD987CD93B96 /* Pods-GoldSpoon_Tycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldSpoon_Tycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon.debug.xcconfig"; sourceTree = "<group>"; };
 		3B09682A1D0C7EF70097A10A /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		3B09682F1D0C88750097A10A /* NearPropertiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearPropertiesTableViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E337591D11964C00D608BC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		03E3375A1D11965F00D608BC /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				03E3375C1D11967600D608BC /* Ranking.jpeg */,
+				036F20DB1D11A350005D4661 /* Main.png */,
+				038C6F8C1D1297A3005180D4 /* City.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		3B09682C1D0C87F10097A10A /* NearProperties */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +155,7 @@
 		3BAE12EA1D0C46D6006AE865 /* GoldSpoon_Tycoon */ = {
 			isa = PBXGroup;
 			children = (
+				03E3375A1D11965F00D608BC /* Image */,
 				3BAE12FD1D0C4DFB006AE865 /* Supporting files */,
 				3B5950AC1D0EA86200AFD078 /* MainPage */,
 				3B09682C1D0C87F10097A10A /* NearProperties */,
@@ -143,6 +168,7 @@
 		3BAE12FD1D0C4DFB006AE865 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				038C6F891D11B9A1005180D4 /* yangfont04.ttf */,
 				3BAE12EB1D0C46D6006AE865 /* AppDelegate.swift */,
 				3BAE12F71D0C46D6006AE865 /* Info.plist */,
 				3BAE12F21D0C46D6006AE865 /* Assets.xcassets */,
@@ -167,6 +193,7 @@
 		CF65382B2BB69BD3891E7D23 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				03E337591D11964C00D608BC /* New Group */,
 				3533B4CA7F97CD987CD93B96 /* Pods-GoldSpoon_Tycoon.debug.xcconfig */,
 				8A3CA27AEF17B9B0991A9F03 /* Pods-GoldSpoon_Tycoon.release.xcconfig */,
 			);
@@ -235,7 +262,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038C6F8D1D1297A3005180D4 /* City.png in Resources */,
+				03E3375E1D11967600D608BC /* Ranking.jpeg in Resources */,
 				3BAE12F61D0C46D6006AE865 /* LaunchScreen.storyboard in Resources */,
+				036F20DC1D11A350005D4661 /* Main.png in Resources */,
 				3BAE12F31D0C46D6006AE865 /* Assets.xcassets in Resources */,
 				3BAE12F11D0C46D6006AE865 /* Main.storyboard in Resources */,
 			);
