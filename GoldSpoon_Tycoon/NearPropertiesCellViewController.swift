@@ -46,12 +46,9 @@ class NearPropertiesCellViewController: UIViewController {
     var longitude = ""
     var name = ""
     var id = ""
-    var typeOne = ""
-    var typeTwo = ""
-    var vincinity = ""
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
         ownerLabel.hidden = true
         buyBottonLabel.hidden = true
@@ -60,7 +57,10 @@ class NearPropertiesCellViewController: UIViewController {
         self.categoryImageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: icon)!)!)
         
         findIfPropertyIsSold()
-        fetchPropertyCost()
+        
+        if value == 0.0 {
+            fetchPropertyCost()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -118,7 +118,7 @@ class NearPropertiesCellViewController: UIViewController {
     func buyProperty(){
         print("Yes")
         
-        Alamofire.request(.GET, "http://localhost:8080/user/\(UserInfo.email)/buy/\(self.id)", parameters: ["value":self.value])
+        Alamofire.request(.GET, "http://localhost:8080/user/\(UserInfo.email)/buy/\(self.id)", parameters:["latitude":UserInfo.latitude,"longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {
