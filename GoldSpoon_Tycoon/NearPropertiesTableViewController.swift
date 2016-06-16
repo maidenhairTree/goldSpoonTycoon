@@ -23,6 +23,7 @@ class NearPropertiesTableViewController: UITableViewController {
     }
 
 
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
