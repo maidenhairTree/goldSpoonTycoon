@@ -118,7 +118,7 @@ class NearPropertiesCellViewController: UIViewController {
     func buyProperty(){
         print("Yes")
         
-        Alamofire.request(.GET, "http://localhost:8080/user/\(UserInfo.email)/buy/\(self.id)", parameters: ["value":self.value])
+        Alamofire.request(.GET, "http://localhost:8080/user/\(UserInfo.email)/buy/\(self.id)", parameters:["latitude":UserInfo.latitude,"longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {

@@ -76,7 +76,7 @@ class NearPropertiesTableViewController: UITableViewController {
     
     func fetchNearProperties(){
         
-        Alamofire.request(.GET, "http://localhost:8080/properties/near", parameters: ["latitude":"35.811844", "longitude":"128.5228247"])
+        Alamofire.request(.GET, "http://localhost:8080/properties/near", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {

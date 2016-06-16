@@ -36,6 +36,11 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("current token exist!")
             fetchProfile()
         }
+        
+        //여기를 실시간으로 받아야함
+        UserInfo.latitude = "35.811844"
+        UserInfo.longitude = "128.5228247"
+    
     }
     
     //페이지 뷰 컨트롤러를 이용해서 페이지를 넘길 때. 위의 viewDidLoad랑 작동을 다르게 해서 효율적으로 만들어야 함
