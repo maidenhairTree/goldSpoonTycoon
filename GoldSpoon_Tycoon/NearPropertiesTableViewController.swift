@@ -59,9 +59,6 @@ class NearPropertiesTableViewController: UITableViewController {
                 destination.latitude = jsonFromServer["placeList"][(path?.row)!]["latitude"].stringValue
                 destination.longitude = jsonFromServer["placeList"][(path?.row)!]["longitude"].stringValue
                 destination.id = jsonFromServer["placeList"][(path?.row)!]["place_id"].stringValue
-                destination.typeOne = jsonFromServer["placeList"][(path?.row)!]["typeOne"].stringValue
-                destination.typeTwo = jsonFromServer["placeList"][(path?.row)!]["typeTwo"].stringValue
-                destination.vincinity = jsonFromServer["placeList"][(path?.row)!]["vincinity"].stringValue
             }
         }
     }

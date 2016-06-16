@@ -255,12 +255,112 @@
                     <view key="view" contentMode="scaleToFill" id="tLc-xa-wwZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MEs-hG-qa6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="tcC-Vd-655"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tcC-Vd-655"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="tcC-Vd-655"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="건물이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUm-ZD-4fb">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="건물가격" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAG-H3-UnI">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하루수익" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itf-ll-0Uo">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b0V-jb-fzk" firstAttribute="top" secondItem="Itf-ll-0Uo" secondAttribute="bottom" constant="375" id="5C1-De-TfB"/>
+                            <constraint firstItem="JUm-ZD-4fb" firstAttribute="trailing" secondItem="qAG-H3-UnI" secondAttribute="trailing" id="6mM-gb-aGC"/>
+                            <constraint firstItem="qAG-H3-UnI" firstAttribute="trailing" secondItem="Itf-ll-0Uo" secondAttribute="trailing" id="O1k-Zm-589"/>
+                            <constraint firstItem="JUm-ZD-4fb" firstAttribute="top" secondItem="MEs-hG-qa6" secondAttribute="bottom" constant="94" id="SzB-Dy-jvw"/>
+                            <constraint firstItem="MEs-hG-qa6" firstAttribute="centerX" secondItem="JUm-ZD-4fb" secondAttribute="centerX" id="WDV-Vn-nCL"/>
+                            <constraint firstItem="JUm-ZD-4fb" firstAttribute="leading" secondItem="tLc-xa-wwZ" secondAttribute="leadingMargin" id="aoV-zC-86M"/>
+                            <constraint firstItem="JUm-ZD-4fb" firstAttribute="leading" secondItem="qAG-H3-UnI" secondAttribute="leading" id="bX2-02-cDC"/>
+                            <constraint firstItem="qAG-H3-UnI" firstAttribute="leading" secondItem="Itf-ll-0Uo" secondAttribute="leading" id="l5L-tU-cRG"/>
+                            <constraint firstItem="JUm-ZD-4fb" firstAttribute="trailing" secondItem="tLc-xa-wwZ" secondAttribute="trailingMargin" id="uAh-SW-46q"/>
+                            <constraint firstItem="Itf-ll-0Uo" firstAttribute="top" secondItem="qAG-H3-UnI" secondAttribute="bottom" constant="8" symbolic="YES" id="wVe-oU-fbG"/>
+                            <constraint firstItem="MEs-hG-qa6" firstAttribute="top" secondItem="r3e-c2-EuA" secondAttribute="bottom" constant="88" id="xYi-TM-ffZ"/>
+                            <constraint firstItem="qAG-H3-UnI" firstAttribute="top" secondItem="JUm-ZD-4fb" secondAttribute="bottom" constant="8" symbolic="YES" id="yrP-YV-jge"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MEs-hG-qa6"/>
+                                <exclude reference="JUm-ZD-4fb"/>
+                                <exclude reference="qAG-H3-UnI"/>
+                                <exclude reference="Itf-ll-0Uo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WDV-Vn-nCL"/>
+                                <exclude reference="xYi-TM-ffZ"/>
+                                <exclude reference="6mM-gb-aGC"/>
+                                <exclude reference="SzB-Dy-jvw"/>
+                                <exclude reference="aoV-zC-86M"/>
+                                <exclude reference="bX2-02-cDC"/>
+                                <exclude reference="uAh-SW-46q"/>
+                                <exclude reference="O1k-Zm-589"/>
+                                <exclude reference="l5L-tU-cRG"/>
+                                <exclude reference="yrP-YV-jge"/>
+                                <exclude reference="wVe-oU-fbG"/>
+                                <exclude reference="5C1-De-TfB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="MEs-hG-qa6"/>
+                                <include reference="JUm-ZD-4fb"/>
+                                <include reference="qAG-H3-UnI"/>
+                                <include reference="Itf-ll-0Uo"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WDV-Vn-nCL"/>
+                                <include reference="xYi-TM-ffZ"/>
+                                <include reference="6mM-gb-aGC"/>
+                                <include reference="SzB-Dy-jvw"/>
+                                <include reference="aoV-zC-86M"/>
+                                <include reference="bX2-02-cDC"/>
+                                <include reference="uAh-SW-46q"/>
+                                <include reference="O1k-Zm-589"/>
+                                <include reference="l5L-tU-cRG"/>
+                                <include reference="yrP-YV-jge"/>
+                                <include reference="wVe-oU-fbG"/>
+                                <include reference="5C1-De-TfB"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="categoryImageView" destination="MEs-hG-qa6" id="pq5-MF-6dP"/>
+                        <outlet property="dailyIncomeLabel" destination="Itf-ll-0Uo" id="zcX-fz-KoC"/>
+                        <outlet property="propertyCostLabel" destination="qAG-H3-UnI" id="pOk-VP-l6O"/>
+                        <outlet property="propertyNameLabel" destination="JUm-ZD-4fb" id="3gI-mC-FGc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXD-te-fkj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="409.5" y="1308"/>
+            <point key="canvasLocation" x="438" y="1308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qEZ-e4-Kri">
@@ -482,7 +582,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kf-gE-q4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2875.5" y="557.25"/>
+            <point key="canvasLocation" x="2896.5" y="557.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="e9D-nl-765">

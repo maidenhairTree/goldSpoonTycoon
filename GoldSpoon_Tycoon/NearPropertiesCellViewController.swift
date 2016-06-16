@@ -46,9 +46,6 @@ class NearPropertiesCellViewController: UIViewController {
     var longitude = ""
     var name = ""
     var id = ""
-    var typeOne = ""
-    var typeTwo = ""
-    var vincinity = ""
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
