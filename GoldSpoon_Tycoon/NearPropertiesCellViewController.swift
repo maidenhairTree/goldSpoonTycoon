@@ -12,6 +12,7 @@ import Alamofire
 
 class NearPropertiesCellViewController: UIViewController {
 
+    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var propertyNameLabel: UILabel!
     @IBOutlet var propertyCostLabel: UILabel!
     @IBOutlet var dailyIncomeLabel: UILabel!
@@ -38,6 +39,17 @@ class NearPropertiesCellViewController: UIViewController {
  
     var dailyRent = 0.0
     var value = 0.0
+    
+    var valueWatcher: Double {
+        get {
+            return self.value
+        }
+        set {
+            self.value = newValue
+            spinner?.stopAnimating()
+            spinner?.hidden = true
+        }
+    }
     
     //Table에서 받아와서 저장할 변수
     var icon = ""
@@ -89,16 +101,18 @@ class NearPropertiesCellViewController: UIViewController {
                     
                     self.ownerLabel.text = isSoldResultJSON["ownerLastName"].stringValue + " " + isSoldResultJSON["ownerFirstName"].stringValue
                     self.ownerLabel.hidden=false
+                    self.buyBottonLabel.hidden = true
                     
                 case .Failure(_):
                     print("no one bought this property : " + self.name)
                     self.buyBottonLabel.hidden=false
+                    self.ownerLabel.hidden=true
                 }
         }
     }
     
     func fetchPropertyCost(){
-        
+        spinner?.startAnimating()
         Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/property/\(id)/value", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
             .responseJSON { response in
                 
@@ -116,7 +130,7 @@ class NearPropertiesCellViewController: UIViewController {
                 else
                 {
                     self.propertyCostLabel.text = self.numberToWon(costInfoFromServer["value"].doubleValue)
-                    self.value = costInfoFromServer["value"].doubleValue
+                    self.valueWatcher = costInfoFromServer["value"].doubleValue
                     self.dailyIncomeLabel.text = self.numberToWon(Double(String(format: "%.0f", costInfoFromServer["rent"].doubleValue))!)
                     
                     self.dailyRent = Double(String(format: "%.0f", costInfoFromServer["rent"].doubleValue))!
@@ -128,7 +142,7 @@ class NearPropertiesCellViewController: UIViewController {
     
     func buyProperty(){
         print("Yes")
-        
+        spinner?.startAnimating()
         Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/user/\(UserInfo.email)/buy/\(self.id)", parameters:["latitude":UserInfo.latitude,"longitude":UserInfo.longitude])
             .responseJSON { response in
                 
@@ -139,12 +153,16 @@ class NearPropertiesCellViewController: UIViewController {
                 var buyResultFromServer = JSON(data: response.data!)
                 
                 if buyResultFromServer.intValue == 1 {
+                    self.spinner?.stopAnimating()
                     print("구매 가능! , 제이슨 값 : \(buyResultFromServer.intValue)")
                     let alertController = UIAlertController(title: "Gold Spoon Tycoon", message: "구매 완료!", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default) { UIAlertAction in })
                     self.presentViewController(alertController, animated: true, completion: nil)
+                    
+                    self.findIfPropertyIsSold()
 
                 } else if buyResultFromServer.intValue == 0 {
+                    self.spinner?.stopAnimating()
                     print("구매 불가! , 제이슨 값 : \(buyResultFromServer.intValue)")
                     let alertController = UIAlertController(title: "Gold Spoon Tycoon", message: "구매 불가! 예산 부족!", preferredStyle: UIAlertControllerStyle.Alert)
                     alertController.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.Default) { UIAlertAction in })

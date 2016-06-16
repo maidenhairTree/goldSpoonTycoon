@@ -11,6 +11,6 @@ import UIKit
 struct UserInfo {
     static var email = ""
     static var cashBalance = 0.0
-    static var latitude = ""
-    static var longitude = ""
+    static var latitude = "35.811844"
+    static var longitude = "128.5228247"
 }

@@ -11,21 +11,49 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import Alamofire
 import SwiftyJSON
+import CoreLocation
 
-class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
+class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLocationManagerDelegate {
 
     @IBOutlet var facebookLoginButton: FBSDKLoginButton!
     
     @IBOutlet var userProfileImage: UIImageView!
     @IBOutlet var userNameLabel: UILabel!
-    
 
     @IBOutlet var userTotalValueLabel: UILabel!
     @IBOutlet var userCashBalanceLabel: UILabel!
     @IBOutlet var userDailyProfitLabel: UILabel!
     @IBOutlet var userPropertyValueLabel: UILabel!
     @IBOutlet var spinner: UIActivityIndicatorView!
-    
+
+    //CoreLocation
+    var locationManager: CLLocationManager = CLLocationManager()
+    var startLocation: CLLocation!
+    var horizontalAccurancy = ""
+    var altitude = ""
+    var verticalAccurancy = ""
+    var distance = ""
+    var latitute: String {
+        get {
+            return UserInfo.latitude
+        }
+        set {
+            UserInfo.latitude = newValue
+            print(UserInfo.latitude)
+            locationManager.startUpdatingLocation()
+        }
+    }
+    var longitude: String {
+        get {
+            return UserInfo.longitude
+        }
+        set {
+            UserInfo.longitude = newValue
+            print(UserInfo.longitude)
+            locationManager.startUpdatingLocation()
+        }
+    }
+
     //for manipulate spinner
     private var totalValue: Double {
         get {
@@ -33,7 +61,6 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         set {
             spinner?.stopAnimating()
-            spinner?.hidden = true
         }
     }
 
@@ -51,7 +78,13 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
         //여기를 실시간으로 받아야함
         UserInfo.latitude = "35.811844"
         UserInfo.longitude = "128.5228247"
-    
+
+        //CoreLocation
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        startLocation = nil
     }
     
     //페이지 뷰 컨트롤러를 이용해서 페이지를 넘길 때. 위의 viewDidLoad랑 작동을 다르게 해서 효율적으로 만들어야 함
@@ -62,6 +95,21 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("current token exist!")
             fetchProfile()
         }
+        
+        if FBSDKAccessToken.currentAccessToken() != nil{
+            print("current token exist!")
+            fetchProfile()
+        }
+        
+        //여기를 실시간으로 받아야함
+        
+        //CoreLocation
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        startLocation = nil
+
 
     }
     
@@ -121,7 +169,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
                     
                     self.userTotalValueLabel.text = self.numberToWon(jsonFromServer["totalValue"].doubleValue)
                     self.userCashBalanceLabel.text = self.numberToWon(jsonFromServer["cashBalance"].doubleValue)
-                    self.userDailyProfitLabel.text = self.numberToWon(jsonFromServer["dailyProfit"].doubleValue)
+                    self.userDailyProfitLabel.text = self.numberToWon(Double(String(format: "%.0f", jsonFromServer["dailyProfit"].doubleValue))!)
                     self.userPropertyValueLabel.text = self.numberToWon(jsonFromServer["propertyValue"].doubleValue)
                     
                     UserInfo.cashBalance = jsonFromServer["cashBalance"].doubleValue
@@ -141,5 +189,34 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
         return numberFormatter.stringFromNumber(numberToChange)!+"원";
     }
     
+    //CoreLocation
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let latestLocation: AnyObject = locations[locations.count - 1]
+        // 위치 정보가 filter에 의해서 변경될 경우 아래의 함수 호출
+        
+        latitute = String(format: "%.4f", latestLocation.coordinate.latitude)
+        longitude = String(format: "%.4f", latestLocation.coordinate.longitude)
+        horizontalAccurancy = String(format: "%.4f", latestLocation.horizontalAccuracy)
+        altitude = String(format: "%.4f", latestLocation.altitude)
+        verticalAccurancy = String(format: "%.4f", latestLocation.verticalAccuracy)
+        
+        if startLocation == nil {
+            startLocation = latestLocation as! CLLocation
+        }
+        
+        let distanceBetween : CLLocationDistance = latestLocation.distanceFromLocation(startLocation)
+        distance = String(format: "%.2f", distanceBetween)
+        
+        print(latitute)
+        print(longitude)
+    }
     
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        // 위치 정보 관련 에러 처리 함수
+        print("GPS Error => \(error.localizedDescription)")
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        // 애플리케이션의 위치 추적 허가 상태가 변경될 경우 호출
+    }
 }

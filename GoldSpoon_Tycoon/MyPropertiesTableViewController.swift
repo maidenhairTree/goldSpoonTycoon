@@ -12,7 +12,20 @@ import SwiftyJSON
 
 class MyPropertiesTableViewController: UITableViewController {
 
+    @IBOutlet var spinner: UIActivityIndicatorView!
+    
     var jsonFromServer: JSON = []
+    
+    var count = 0
+    var countWatcher: Int {
+        get {
+            return self.count
+        }
+        set {
+            self.count = newValue
+            spinner?.stopAnimating()
+        }
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -20,6 +33,12 @@ class MyPropertiesTableViewController: UITableViewController {
         fetchMyProperties()
         
         print("in near property first table view viewDidAppear:" + UserInfo.email)
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "MyCity.png")!)
     }
     
     
@@ -56,10 +75,8 @@ class MyPropertiesTableViewController: UITableViewController {
                 
                 destination.name = (cell?.textLabel?.text!)!
                 destination.icon = jsonFromServer["placeList"][(path?.row)!]["icon"].stringValue
-                destination.latitude = jsonFromServer["placeList"][(path?.row)!]["latitude"].stringValue
-                destination.longitude = jsonFromServer["placeList"][(path?.row)!]["longitude"].stringValue
-                destination.id = jsonFromServer["placeList"][(path?.row)!]["place_id"].stringValue
                 destination.value = jsonFromServer["placeList"][(path?.row)!]["value"].doubleValue
+                destination.dailyRent = jsonFromServer["placeList"][(path?.row)!]["dailyRent"].doubleValue
             }
         }
     }
@@ -73,7 +90,7 @@ class MyPropertiesTableViewController: UITableViewController {
     }
     
     func fetchMyProperties(){
-        
+        spinner?.startAnimating()
         Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/user/\(UserInfo.email)/properties")
             .responseJSON { response in
                 
@@ -82,6 +99,7 @@ class MyPropertiesTableViewController: UITableViewController {
                 }
                 
                 self.jsonFromServer = JSON(data: response.data!)
+                self.countWatcher = self.jsonFromServer.count
                 self.tableView.reloadData()
         }
         

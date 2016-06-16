@@ -12,14 +12,31 @@ import SwiftyJSON
 
 class UserRankTableViewController: UITableViewController {
 
+    @IBOutlet var spinner: UIActivityIndicatorView!
+    var count = 0;
+    var countWatcher: Int {
+        get {
+            return self.count
+        }
+        set {
+            spinner?.stopAnimating()
+        }
+    }
+    
+    
     var jsonFromServer: JSON = []
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        fetchMyProperties()
+        fetchRank()
         
         print("in near property first table view viewDidAppear:" + UserInfo.email)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Ranking.png")!)
     }
     
     
@@ -47,8 +64,8 @@ class UserRankTableViewController: UITableViewController {
         return cell
     }
     
-    func fetchMyProperties(){
-        
+    func fetchRank(){
+        spinner?.startAnimating()
         Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/rank")
             .responseJSON { response in
                 
@@ -57,6 +74,7 @@ class UserRankTableViewController: UITableViewController {
                 }
                 
                 self.jsonFromServer = JSON(data: response.data!)
+                self.countWatcher = self.jsonFromServer.count
                 self.tableView.reloadData()
         }
         

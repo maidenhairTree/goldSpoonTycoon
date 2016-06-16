@@ -22,7 +22,6 @@ class NearPropertiesTableViewController: UITableViewController {
         }
         set {
             spinner?.stopAnimating()
-            spinner?.hidden = true
         }
     }
     
@@ -33,7 +32,11 @@ class NearPropertiesTableViewController: UITableViewController {
         
          print("in near property first table view viewDidAppear:" + UserInfo.email)
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "City.png")!)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,6 +61,7 @@ class NearPropertiesTableViewController: UITableViewController {
         
         return cell
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "NearPropertyTableToCell" {

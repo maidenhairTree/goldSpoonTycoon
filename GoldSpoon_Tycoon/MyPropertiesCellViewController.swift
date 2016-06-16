@@ -17,36 +17,22 @@ class MyPropertiesCellViewController: UIViewController {
     @IBOutlet var dailyIncomeLabel: UILabel!
     @IBOutlet var categoryImageView: UIImageView!
     
-    var dailyCost = 0.0
+    //Table에서 받아와서 저장할 변수
     var dailyRent = 0.0
     var value = 0.0
-    
-    //Table에서 받아와서 저장할 변수
     var icon = ""
-    var latitude = ""
-    var longitude = ""
     var name = ""
-    var id = ""
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        propertyNameLabel.text = name
-//        self.categoryImageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: icon)!)!)
-//        propertyCostLabel.hidden = false
-//        print(name)
-//        
-//        if value == 0.0 {
-//            fetchPropertyCost()
-//        }
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-                
         propertyNameLabel.text = name
         self.categoryImageView.image = UIImage(data: NSData(contentsOfURL: NSURL(string: icon)!)!)
         self.propertyCostLabel.text = self.numberToWon(value)
+        self.dailyIncomeLabel.text = self.numberToWon(Double(String(format: "%.0f", dailyRent))!)
         
     }
     
