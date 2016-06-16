@@ -36,7 +36,6 @@ class NearPropertiesCellViewController: UIViewController {
         }
     }
  
-    var dailyCost = 0.0
     var dailyRent = 0.0
     var value = 0.0
     
@@ -46,6 +45,13 @@ class NearPropertiesCellViewController: UIViewController {
     var longitude = ""
     var name = ""
     var id = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        ownerLabel.hidden = true
+        buyBottonLabel.hidden = true
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -93,7 +99,7 @@ class NearPropertiesCellViewController: UIViewController {
     
     func fetchPropertyCost(){
         
-        Alamofire.request(.GET, "http://localhost:8080/property/value", parameters: ["latitude":latitude, "longitude":longitude])
+        Alamofire.request(.GET, "http://localhost:8080/property/\(id)/value", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {
@@ -102,13 +108,18 @@ class NearPropertiesCellViewController: UIViewController {
                 
                 var costInfoFromServer = JSON(data: response.data!)
                 if costInfoFromServer["value"].stringValue.isEmpty {
-                    self.propertyCostLabel.text = "100"
+                    self.propertyCostLabel.text = "Error"
                     self.value = 100
+                    self.ownerLabel.hidden = true
+                    self.buyBottonLabel.hidden = true
                 }
                 else
                 {
                     self.propertyCostLabel.text = self.numberToWon(costInfoFromServer["value"].doubleValue)
                     self.value = costInfoFromServer["value"].doubleValue
+                    self.dailyIncomeLabel.text = self.numberToWon(Double(String(format: "%.0f", costInfoFromServer["rent"].doubleValue))!)
+                    
+                    self.dailyRent = Double(String(format: "%.0f", costInfoFromServer["rent"].doubleValue))!
                 }
         }
         

@@ -128,27 +128,27 @@
                                 <exclude reference="Y8Q-Pe-yD6"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5qo-Wg-X4Y"/>
-                                <exclude reference="YVk-QA-5Ik"/>
-                                <exclude reference="vJd-CH-OlO"/>
-                                <exclude reference="74q-pd-nA5"/>
-                                <exclude reference="Jms-ad-j2f"/>
-                                <exclude reference="btI-2J-nNE"/>
-                                <exclude reference="NEp-1A-D5Z"/>
-                                <exclude reference="eAv-zH-D0Y"/>
-                                <exclude reference="gei-HU-rsx"/>
-                                <exclude reference="2ZV-2s-5Ii"/>
-                                <exclude reference="HO1-8b-BYc"/>
-                                <exclude reference="YRk-xJ-4bt"/>
+                                <exclude reference="sUb-1h-JCy"/>
+                                <exclude reference="RId-FV-6A6"/>
+                                <exclude reference="yLl-bP-Ae4"/>
                                 <exclude reference="eY1-2D-HX7"/>
                                 <exclude reference="fjO-Ze-ZF6"/>
                                 <exclude reference="tVq-ZB-GX1"/>
+                                <exclude reference="2ZV-2s-5Ii"/>
+                                <exclude reference="HO1-8b-BYc"/>
+                                <exclude reference="YRk-xJ-4bt"/>
                                 <exclude reference="501-1Y-c9E"/>
                                 <exclude reference="c9g-ud-m5v"/>
                                 <exclude reference="k8l-Ie-RaE"/>
-                                <exclude reference="RId-FV-6A6"/>
-                                <exclude reference="yLl-bP-Ae4"/>
-                                <exclude reference="sUb-1h-JCy"/>
+                                <exclude reference="NEp-1A-D5Z"/>
+                                <exclude reference="eAv-zH-D0Y"/>
+                                <exclude reference="gei-HU-rsx"/>
+                                <exclude reference="74q-pd-nA5"/>
+                                <exclude reference="Jms-ad-j2f"/>
+                                <exclude reference="btI-2J-nNE"/>
+                                <exclude reference="5qo-Wg-X4Y"/>
+                                <exclude reference="YVk-QA-5Ik"/>
+                                <exclude reference="vJd-CH-OlO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -162,27 +162,27 @@
                                 <include reference="Y8Q-Pe-yD6"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5qo-Wg-X4Y"/>
-                                <include reference="YVk-QA-5Ik"/>
-                                <include reference="vJd-CH-OlO"/>
-                                <include reference="74q-pd-nA5"/>
-                                <include reference="Jms-ad-j2f"/>
-                                <include reference="btI-2J-nNE"/>
-                                <include reference="NEp-1A-D5Z"/>
-                                <include reference="eAv-zH-D0Y"/>
-                                <include reference="gei-HU-rsx"/>
-                                <include reference="2ZV-2s-5Ii"/>
-                                <include reference="HO1-8b-BYc"/>
-                                <include reference="YRk-xJ-4bt"/>
+                                <include reference="sUb-1h-JCy"/>
+                                <include reference="RId-FV-6A6"/>
+                                <include reference="yLl-bP-Ae4"/>
                                 <include reference="eY1-2D-HX7"/>
                                 <include reference="fjO-Ze-ZF6"/>
                                 <include reference="tVq-ZB-GX1"/>
+                                <include reference="2ZV-2s-5Ii"/>
+                                <include reference="HO1-8b-BYc"/>
+                                <include reference="YRk-xJ-4bt"/>
                                 <include reference="501-1Y-c9E"/>
                                 <include reference="c9g-ud-m5v"/>
                                 <include reference="k8l-Ie-RaE"/>
-                                <include reference="RId-FV-6A6"/>
-                                <include reference="yLl-bP-Ae4"/>
-                                <include reference="sUb-1h-JCy"/>
+                                <include reference="NEp-1A-D5Z"/>
+                                <include reference="eAv-zH-D0Y"/>
+                                <include reference="gei-HU-rsx"/>
+                                <include reference="74q-pd-nA5"/>
+                                <include reference="Jms-ad-j2f"/>
+                                <include reference="btI-2J-nNE"/>
+                                <include reference="5qo-Wg-X4Y"/>
+                                <include reference="YVk-QA-5Ik"/>
+                                <include reference="vJd-CH-OlO"/>
                             </mask>
                         </variation>
                     </view>
@@ -367,15 +367,19 @@
             <objects>
                 <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="8k1-93-9YH" customClass="UserRankTableViewController" customModule="GoldSpoon_Tycoon" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RRU-fk-hBK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="jcE-IT-kJM" style="IBUITableViewCellStyleDefault" id="bfi-wm-Z4p">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bfi-wm-Z4p" id="TtK-O1-LAv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jcE-IT-kJM">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -440,18 +444,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="GjL-2e-4vg" style="IBUITableViewCellStyleDefault" id="uuA-kT-HuM">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="HOn-A3-Gq0" style="IBUITableViewCellStyleDefault" id="uuA-kT-HuM">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uuA-kT-HuM" id="Poh-a5-W3A">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GjL-2e-4vg">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HOn-A3-Gq0">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="heightClass=regular-widthClass=compact">
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
