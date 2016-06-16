@@ -360,8 +360,8 @@
                                 <exclude reference="Itf-ll-0Uo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WDV-Vn-nCL"/>
-                                <exclude reference="xYi-TM-ffZ"/>
+                                <exclude reference="5C1-De-TfB"/>
+                                <exclude reference="wVe-oU-fbG"/>
                                 <exclude reference="6mM-gb-aGC"/>
                                 <exclude reference="SzB-Dy-jvw"/>
                                 <exclude reference="aoV-zC-86M"/>
@@ -370,8 +370,8 @@
                                 <exclude reference="O1k-Zm-589"/>
                                 <exclude reference="l5L-tU-cRG"/>
                                 <exclude reference="yrP-YV-jge"/>
-                                <exclude reference="wVe-oU-fbG"/>
-                                <exclude reference="5C1-De-TfB"/>
+                                <exclude reference="WDV-Vn-nCL"/>
+                                <exclude reference="xYi-TM-ffZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -382,8 +382,8 @@
                                 <include reference="Itf-ll-0Uo"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WDV-Vn-nCL"/>
-                                <include reference="xYi-TM-ffZ"/>
+                                <include reference="5C1-De-TfB"/>
+                                <include reference="wVe-oU-fbG"/>
                                 <include reference="6mM-gb-aGC"/>
                                 <include reference="SzB-Dy-jvw"/>
                                 <include reference="aoV-zC-86M"/>
@@ -392,8 +392,8 @@
                                 <include reference="O1k-Zm-589"/>
                                 <include reference="l5L-tU-cRG"/>
                                 <include reference="yrP-YV-jge"/>
-                                <include reference="wVe-oU-fbG"/>
-                                <include reference="5C1-De-TfB"/>
+                                <include reference="WDV-Vn-nCL"/>
+                                <include reference="xYi-TM-ffZ"/>
                             </mask>
                         </variation>
                     </view>
