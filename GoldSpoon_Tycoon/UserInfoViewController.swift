@@ -24,8 +24,19 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var userCashBalanceLabel: UILabel!
     @IBOutlet var userDailyProfitLabel: UILabel!
     @IBOutlet var userPropertyValueLabel: UILabel!
-
+    @IBOutlet var spinner: UIActivityIndicatorView!
     
+    //for manipulate spinner
+    private var totalValue: Double {
+        get {
+            return self.totalValue
+        }
+        set {
+            spinner?.stopAnimating()
+            spinner?.hidden = true
+        }
+    }
+
     //처음 어플리케이션을 실행하였을 떄
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +89,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func fetchProfile() {
+        spinner?.startAnimating()
         //Facebook Request
         let parameters = ["fields" : "email, first_name, last_name, picture.type(large)"]
         FBSDKGraphRequest(graphPath: "me", parameters: parameters).startWithCompletionHandler({ (connection, user, requestError) -> Void in
@@ -98,7 +110,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.userNameLabel.text = "\(userLastName) \(userFirstName)"
             
             //Server Request
-            Alamofire.request(.GET, "http://localhost:8080/user/"+UserInfo.email, parameters: ["firstName":userFirstName, "lastName":userLastName])
+            Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/user/"+UserInfo.email, parameters: ["firstName":userFirstName, "lastName":userLastName])
                 .responseJSON { response in
                     
                     if let json = response.result.value {
@@ -113,6 +125,8 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate {
                     self.userPropertyValueLabel.text = self.numberToWon(jsonFromServer["propertyValue"].doubleValue)
                     
                     UserInfo.cashBalance = jsonFromServer["cashBalance"].doubleValue
+                    
+                    self.totalValue = jsonFromServer["totalValue"].doubleValue
             }
         })
         

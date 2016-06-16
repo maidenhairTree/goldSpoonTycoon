@@ -12,7 +12,19 @@ import SwiftyJSON
 
 class NearPropertiesTableViewController: UITableViewController {
 
+    @IBOutlet var spinner: UIActivityIndicatorView!
+    
     var jsonFromServer: JSON = []
+    
+    var count: Int {
+        get {
+            return self.count
+        }
+        set {
+            spinner?.stopAnimating()
+            spinner?.hidden = true
+        }
+    }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -72,8 +84,8 @@ class NearPropertiesTableViewController: UITableViewController {
     }
     
     func fetchNearProperties(){
-        
-        Alamofire.request(.GET, "http://localhost:8080/properties/near", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
+        spinner?.startAnimating()
+        Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/properties/near", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {
@@ -81,6 +93,7 @@ class NearPropertiesTableViewController: UITableViewController {
                 }
                 
                 self.jsonFromServer = JSON(data: response.data!)
+                self.count = self.jsonFromServer.count
                 self.tableView.reloadData()
         }
         

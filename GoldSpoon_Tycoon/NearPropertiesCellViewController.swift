@@ -76,7 +76,7 @@ class NearPropertiesCellViewController: UIViewController {
     
     func findIfPropertyIsSold() {
         
-        Alamofire.request(.GET, "http://localhost:8080/properties/\(id)")
+        Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/properties/\(id)")
             .responseJSON { response in
                 switch response.result {
                 case .Success:
@@ -99,7 +99,7 @@ class NearPropertiesCellViewController: UIViewController {
     
     func fetchPropertyCost(){
         
-        Alamofire.request(.GET, "http://localhost:8080/property/\(id)/value", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
+        Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/property/\(id)/value", parameters: ["latitude":UserInfo.latitude, "longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {
@@ -129,7 +129,7 @@ class NearPropertiesCellViewController: UIViewController {
     func buyProperty(){
         print("Yes")
         
-        Alamofire.request(.GET, "http://localhost:8080/user/\(UserInfo.email)/buy/\(self.id)", parameters:["latitude":UserInfo.latitude,"longitude":UserInfo.longitude])
+        Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/user/\(UserInfo.email)/buy/\(self.id)", parameters:["latitude":UserInfo.latitude,"longitude":UserInfo.longitude])
             .responseJSON { response in
                 
                 if let json = response.result.value {

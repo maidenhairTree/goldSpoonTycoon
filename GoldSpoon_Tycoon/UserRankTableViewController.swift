@@ -49,7 +49,7 @@ class UserRankTableViewController: UITableViewController {
     
     func fetchMyProperties(){
         
-        Alamofire.request(.GET, "http://localhost:8080/rank")
+        Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/rank")
             .responseJSON { response in
                 
                 if let json = response.result.value {

@@ -74,7 +74,7 @@ class MyPropertiesTableViewController: UITableViewController {
     
     func fetchMyProperties(){
         
-        Alamofire.request(.GET, "http://localhost:8080/user/\(UserInfo.email)/properties")
+        Alamofire.request(.GET, "https://gold-spoon-tycoon.herokuapp.com/user/\(UserInfo.email)/properties")
             .responseJSON { response in
                 
                 if let json = response.result.value {
