@@ -89,15 +89,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 재산" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-oh-VAw">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="Yangmixeddot" family="Yang mixed dot" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="478" width="360" height="20"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="통장 잔고" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTZ-65-2Si">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Yangmixeddot" family="Yang mixed dot" pointSize="17"/>
@@ -132,6 +123,15 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 재산" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-oh-VAw">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Yangmixeddot" family="Yang mixed dot" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="478" width="360" height="20"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -180,12 +180,12 @@
                                 <exclude reference="QIl-hc-NcO"/>
                                 <exclude reference="jHH-Y2-e5y"/>
                                 <exclude reference="kS6-dK-2uD"/>
-                                <exclude reference="ZuX-oh-VAw"/>
                                 <exclude reference="FTZ-65-2Si"/>
                                 <exclude reference="1x6-wY-YL6"/>
                                 <exclude reference="Y8Q-Pe-yD6"/>
                                 <exclude reference="AaE-g2-Kbh"/>
                                 <exclude reference="Ujw-o0-nlc"/>
+                                <exclude reference="ZuX-oh-VAw"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="CrQ-By-cVa"/>
@@ -222,12 +222,12 @@
                                 <include reference="QIl-hc-NcO"/>
                                 <include reference="jHH-Y2-e5y"/>
                                 <include reference="kS6-dK-2uD"/>
-                                <include reference="ZuX-oh-VAw"/>
                                 <include reference="FTZ-65-2Si"/>
                                 <include reference="1x6-wY-YL6"/>
                                 <include reference="Y8Q-Pe-yD6"/>
                                 <include reference="AaE-g2-Kbh"/>
                                 <include reference="Ujw-o0-nlc"/>
+                                <include reference="ZuX-oh-VAw"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="CrQ-By-cVa"/>
@@ -284,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="aJx-Zl-CuM">
-                            <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                            <rect key="frame" x="0.0" y="136" width="600" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
@@ -401,8 +401,7 @@
                                 <exclude reference="Itf-ll-0Uo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="OMc-fB-Njx"/>
-                                <exclude reference="ZqC-PQ-Lzp"/>
+                                <exclude reference="lIn-cZ-pxJ"/>
                                 <exclude reference="ALu-fE-6eF"/>
                                 <exclude reference="adG-p1-IeA"/>
                                 <exclude reference="fkY-6H-ot1"/>
@@ -411,7 +410,8 @@
                                 <exclude reference="25K-kp-VSX"/>
                                 <exclude reference="EKA-fa-lux"/>
                                 <exclude reference="VX4-Xk-jWz"/>
-                                <exclude reference="lIn-cZ-pxJ"/>
+                                <exclude reference="OMc-fB-Njx"/>
+                                <exclude reference="ZqC-PQ-Lzp"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -422,8 +422,7 @@
                                 <include reference="Itf-ll-0Uo"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="OMc-fB-Njx"/>
-                                <include reference="ZqC-PQ-Lzp"/>
+                                <include reference="lIn-cZ-pxJ"/>
                                 <include reference="ALu-fE-6eF"/>
                                 <include reference="adG-p1-IeA"/>
                                 <include reference="fkY-6H-ot1"/>
@@ -432,7 +431,8 @@
                                 <include reference="25K-kp-VSX"/>
                                 <include reference="EKA-fa-lux"/>
                                 <include reference="VX4-Xk-jWz"/>
-                                <include reference="lIn-cZ-pxJ"/>
+                                <include reference="OMc-fB-Njx"/>
+                                <include reference="ZqC-PQ-Lzp"/>
                             </mask>
                         </variation>
                     </view>
@@ -456,7 +456,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="Hk3-WM-XyZ">
-                            <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                            <rect key="frame" x="0.0" y="136" width="600" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
                         <prototypes>
@@ -688,19 +688,8 @@
                                 <exclude reference="jg7-iT-m3S"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="EaM-Vz-BBp"/>
-                                <exclude reference="H5g-Iv-CyJ"/>
-                                <exclude reference="wpx-2Q-v3W"/>
-                                <exclude reference="0Yc-ty-mrl"/>
-                                <exclude reference="4Vi-Eh-Ra7"/>
-                                <exclude reference="DKp-5I-kiR"/>
-                                <exclude reference="qT9-5z-KHd"/>
-                                <exclude reference="4i6-l0-e7e"/>
-                                <exclude reference="97P-eC-FrE"/>
-                                <exclude reference="H8E-Q9-guq"/>
-                                <exclude reference="1PW-WX-Tqo"/>
-                                <exclude reference="eWe-0b-8VY"/>
-                                <exclude reference="zrp-Te-7uK"/>
+                                <exclude reference="e5E-xf-aIx"/>
+                                <exclude reference="nKx-Z5-GY2"/>
                                 <exclude reference="41z-u7-7fv"/>
                                 <exclude reference="TJM-W6-ZdU"/>
                                 <exclude reference="WQE-jA-SgL"/>
@@ -708,8 +697,19 @@
                                 <exclude reference="2ae-rt-wgt"/>
                                 <exclude reference="Qnw-OZ-BUx"/>
                                 <exclude reference="cLg-rc-ZdJ"/>
-                                <exclude reference="e5E-xf-aIx"/>
-                                <exclude reference="nKx-Z5-GY2"/>
+                                <exclude reference="4i6-l0-e7e"/>
+                                <exclude reference="97P-eC-FrE"/>
+                                <exclude reference="H8E-Q9-guq"/>
+                                <exclude reference="0Yc-ty-mrl"/>
+                                <exclude reference="4Vi-Eh-Ra7"/>
+                                <exclude reference="DKp-5I-kiR"/>
+                                <exclude reference="qT9-5z-KHd"/>
+                                <exclude reference="1PW-WX-Tqo"/>
+                                <exclude reference="eWe-0b-8VY"/>
+                                <exclude reference="zrp-Te-7uK"/>
+                                <exclude reference="EaM-Vz-BBp"/>
+                                <exclude reference="H5g-Iv-CyJ"/>
+                                <exclude reference="wpx-2Q-v3W"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -723,19 +723,8 @@
                                 <include reference="jg7-iT-m3S"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="EaM-Vz-BBp"/>
-                                <include reference="H5g-Iv-CyJ"/>
-                                <include reference="wpx-2Q-v3W"/>
-                                <include reference="0Yc-ty-mrl"/>
-                                <include reference="4Vi-Eh-Ra7"/>
-                                <include reference="DKp-5I-kiR"/>
-                                <include reference="qT9-5z-KHd"/>
-                                <include reference="4i6-l0-e7e"/>
-                                <include reference="97P-eC-FrE"/>
-                                <include reference="H8E-Q9-guq"/>
-                                <include reference="1PW-WX-Tqo"/>
-                                <include reference="eWe-0b-8VY"/>
-                                <include reference="zrp-Te-7uK"/>
+                                <include reference="e5E-xf-aIx"/>
+                                <include reference="nKx-Z5-GY2"/>
                                 <include reference="41z-u7-7fv"/>
                                 <include reference="TJM-W6-ZdU"/>
                                 <include reference="WQE-jA-SgL"/>
@@ -743,8 +732,19 @@
                                 <include reference="2ae-rt-wgt"/>
                                 <include reference="Qnw-OZ-BUx"/>
                                 <include reference="cLg-rc-ZdJ"/>
-                                <include reference="e5E-xf-aIx"/>
-                                <include reference="nKx-Z5-GY2"/>
+                                <include reference="4i6-l0-e7e"/>
+                                <include reference="97P-eC-FrE"/>
+                                <include reference="H8E-Q9-guq"/>
+                                <include reference="0Yc-ty-mrl"/>
+                                <include reference="4Vi-Eh-Ra7"/>
+                                <include reference="DKp-5I-kiR"/>
+                                <include reference="qT9-5z-KHd"/>
+                                <include reference="1PW-WX-Tqo"/>
+                                <include reference="eWe-0b-8VY"/>
+                                <include reference="zrp-Te-7uK"/>
+                                <include reference="EaM-Vz-BBp"/>
+                                <include reference="H5g-Iv-CyJ"/>
+                                <include reference="wpx-2Q-v3W"/>
                             </mask>
                         </variation>
                     </view>

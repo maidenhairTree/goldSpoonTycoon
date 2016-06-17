@@ -96,11 +96,6 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLoca
             fetchProfile()
         }
         
-        if FBSDKAccessToken.currentAccessToken() != nil{
-            print("current token exist!")
-            fetchProfile()
-        }
-        
         //여기를 실시간으로 받아야함
         
         //CoreLocation
