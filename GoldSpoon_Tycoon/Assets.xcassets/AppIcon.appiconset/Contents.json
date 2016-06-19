@@ -1,8 +1,9 @@
 {
   "images" : [
     {
-      "idiom" : "iphone",
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "KakaoTalk_Photo_2016-06-17-18-55-48_74.png",
       "scale" : "2x"
     },
     {
