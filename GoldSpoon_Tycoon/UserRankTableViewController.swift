@@ -59,7 +59,7 @@ class UserRankTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
         //(셀 넘버 == 제이슨 배열 인덱스)
-        cell.textLabel?.text = self.jsonFromServer["userList"][indexPath.row]["lastName"].stringValue + " " + self.jsonFromServer["userList"][indexPath.row]["firstName"].stringValue
+        cell.textLabel?.text = "#\(indexPath.row+1) " + self.jsonFromServer["userList"][indexPath.row]["lastName"].stringValue + " " + self.jsonFromServer["userList"][indexPath.row]["firstName"].stringValue
         
         return cell
     }

@@ -32,6 +32,8 @@ class MyPropertiesTableViewController: UITableViewController {
         
         fetchMyProperties()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "MyCity.png")!)
+        
         print("in near property first table view viewDidAppear:" + UserInfo.email)
         
     }

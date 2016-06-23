@@ -10,14 +10,8 @@
 		3B09682B1D0C7EF70097A10A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09682A1D0C7EF70097A10A /* UserInfo.swift */; };
 		3B0968301D0C88750097A10A /* NearPropertiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B09682F1D0C88750097A10A /* NearPropertiesTableViewController.swift */; };
 		3B0968321D0C89A70097A10A /* NearPropertiesCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0968311D0C89A70097A10A /* NearPropertiesCellViewController.swift */; };
-		3B1330ED1D1326230057896A /* City.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330E71D1326230057896A /* City.png */; };
-		3B1330EE1D1326230057896A /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330E81D1326230057896A /* Info.png */; };
-		3B1330EF1D1326230057896A /* Main.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330E91D1326230057896A /* Main.png */; };
-		3B1330F01D1326230057896A /* MyCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330EA1D1326230057896A /* MyCity.png */; };
-		3B1330F11D1326230057896A /* myCityinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330EB1D1326230057896A /* myCityinfo.png */; };
 		3B1330F31D1329D80057896A /* yangfont10.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330E61D1326190057896A /* yangfont10.ttf */; };
 		3B1330F41D1329DB0057896A /* yangfont04.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330E51D1326190057896A /* yangfont04.ttf */; };
-		3B1330F61D132EE00057896A /* Ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B1330F51D132EE00057896A /* Ranking.png */; };
 		3B32FE6E1D12BEF90036EB75 /* UserRankTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B32FE6D1D12BEF90036EB75 /* UserRankTableViewController.swift */; };
 		3B495F3F1D0EAAFB00F583ED /* MyPropertiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B495F3E1D0EAAFB00F583ED /* MyPropertiesTableViewController.swift */; };
 		3B495F411D0EAB9A00F583ED /* MyPropertiesCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B495F401D0EAB9A00F583ED /* MyPropertiesCellViewController.swift */; };
@@ -33,6 +27,12 @@
 		3BAE130B1D0C6ACE006AE865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13051D0C6ACE006AE865 /* FBSDKLoginKit.framework */; };
 		3BAE130C1D0C6ACE006AE865 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13061D0C6ACE006AE865 /* FBSDKShareKit.framework */; };
 		3BAE130D1D0C6ACE006AE865 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BAE13071D0C6ACE006AE865 /* SwiftyJSON.framework */; };
+		3BED56FF1D13E1D40070329C /* City.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BED56F91D13E1D40070329C /* City.png */; };
+		3BED57011D13E1D40070329C /* Main.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BED56FB1D13E1D40070329C /* Main.png */; };
+		3BED57021D13E1D40070329C /* MyCity.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BED56FC1D13E1D40070329C /* MyCity.png */; };
+		3BED57041D13E1D40070329C /* Ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BED56FE1D13E1D40070329C /* Ranking.png */; };
+		3BED57141D13F4F20070329C /* MyCityinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BED57121D13F4F20070329C /* MyCityinfo.png */; };
+		3BED57161D13F5790070329C /* CityInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BED57151D13F5790070329C /* CityInfo.png */; };
 		8B9D41284695A68BD1C435E2 /* Pods_GoldSpoon_Tycoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4630A275CA4A4D7C4C7CDC3E /* Pods_GoldSpoon_Tycoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,12 +43,6 @@
 		3B0968311D0C89A70097A10A /* NearPropertiesCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearPropertiesCellViewController.swift; sourceTree = "<group>"; };
 		3B1330E51D1326190057896A /* yangfont04.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yangfont04.ttf; sourceTree = "<group>"; };
 		3B1330E61D1326190057896A /* yangfont10.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = yangfont10.ttf; sourceTree = "<group>"; };
-		3B1330E71D1326230057896A /* City.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = City.png; sourceTree = "<group>"; };
-		3B1330E81D1326230057896A /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info.png; sourceTree = "<group>"; };
-		3B1330E91D1326230057896A /* Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main.png; sourceTree = "<group>"; };
-		3B1330EA1D1326230057896A /* MyCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCity.png; sourceTree = "<group>"; };
-		3B1330EB1D1326230057896A /* myCityinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myCityinfo.png; sourceTree = "<group>"; };
-		3B1330F51D132EE00057896A /* Ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ranking.png; sourceTree = "<group>"; };
 		3B32FE6D1D12BEF90036EB75 /* UserRankTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRankTableViewController.swift; sourceTree = "<group>"; };
 		3B495F3E1D0EAAFB00F583ED /* MyPropertiesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPropertiesTableViewController.swift; sourceTree = "<group>"; };
 		3B495F401D0EAB9A00F583ED /* MyPropertiesCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPropertiesCellViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +60,12 @@
 		3BAE13051D0C6ACE006AE865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKLoginKit/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		3BAE13061D0C6ACE006AE865 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKShareKit/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		3BAE13071D0C6ACE006AE865 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/GoldSpoon_Tycoon-bljlikgmtlraznedvrbdmqhchgnf/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		3BED56F91D13E1D40070329C /* City.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = City.png; sourceTree = "<group>"; };
+		3BED56FB1D13E1D40070329C /* Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main.png; sourceTree = "<group>"; };
+		3BED56FC1D13E1D40070329C /* MyCity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCity.png; sourceTree = "<group>"; };
+		3BED56FE1D13E1D40070329C /* Ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ranking.png; sourceTree = "<group>"; };
+		3BED57121D13F4F20070329C /* MyCityinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyCityinfo.png; sourceTree = "<group>"; };
+		3BED57151D13F5790070329C /* CityInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CityInfo.png; sourceTree = "<group>"; };
 		4630A275CA4A4D7C4C7CDC3E /* Pods_GoldSpoon_Tycoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldSpoon_Tycoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3CA27AEF17B9B0991A9F03 /* Pods-GoldSpoon_Tycoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldSpoon_Tycoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldSpoon_Tycoon/Pods-GoldSpoon_Tycoon.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,12 +100,12 @@
 		3B1330E21D1325E90057896A /* ImageAndFont */ = {
 			isa = PBXGroup;
 			children = (
-				3B1330E71D1326230057896A /* City.png */,
-				3B1330E81D1326230057896A /* Info.png */,
-				3B1330E91D1326230057896A /* Main.png */,
-				3B1330EA1D1326230057896A /* MyCity.png */,
-				3B1330EB1D1326230057896A /* myCityinfo.png */,
-				3B1330F51D132EE00057896A /* Ranking.png */,
+				3BED56F91D13E1D40070329C /* City.png */,
+				3BED56FB1D13E1D40070329C /* Main.png */,
+				3BED57121D13F4F20070329C /* MyCityinfo.png */,
+				3BED57151D13F5790070329C /* CityInfo.png */,
+				3BED56FC1D13E1D40070329C /* MyCity.png */,
+				3BED56FE1D13E1D40070329C /* Ranking.png */,
 				3B1330E51D1326190057896A /* yangfont04.ttf */,
 				3B1330E61D1326190057896A /* yangfont10.ttf */,
 			);
@@ -267,17 +267,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B1330EF1D1326230057896A /* Main.png in Resources */,
-				3B1330ED1D1326230057896A /* City.png in Resources */,
+				3BED57011D13E1D40070329C /* Main.png in Resources */,
+				3BED57021D13E1D40070329C /* MyCity.png in Resources */,
+				3BED56FF1D13E1D40070329C /* City.png in Resources */,
+				3BED57041D13E1D40070329C /* Ranking.png in Resources */,
 				3BAE12F61D0C46D6006AE865 /* LaunchScreen.storyboard in Resources */,
-				3B1330F01D1326230057896A /* MyCity.png in Resources */,
-				3B1330F61D132EE00057896A /* Ranking.png in Resources */,
-				3B1330F11D1326230057896A /* myCityinfo.png in Resources */,
 				3B1330F41D1329DB0057896A /* yangfont04.ttf in Resources */,
-				3B1330EE1D1326230057896A /* Info.png in Resources */,
+				3BED57161D13F5790070329C /* CityInfo.png in Resources */,
 				3BAE12F31D0C46D6006AE865 /* Assets.xcassets in Resources */,
 				3BAE12F11D0C46D6006AE865 /* Main.storyboard in Resources */,
 				3B1330F31D1329D80057896A /* yangfont10.ttf in Resources */,
+				3BED57141D13F4F20070329C /* MyCityinfo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

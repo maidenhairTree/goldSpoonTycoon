@@ -25,6 +25,7 @@ class MyPropertiesCellViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "MyCityinfo.png")!)
     }
     
     override func viewDidAppear(animated: Bool) {

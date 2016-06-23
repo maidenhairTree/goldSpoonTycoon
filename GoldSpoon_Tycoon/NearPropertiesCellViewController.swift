@@ -63,6 +63,8 @@ class NearPropertiesCellViewController: UIViewController {
         
         ownerLabel.hidden = true
         buyBottonLabel.hidden = true
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "CityInfo.png")!)
     }
     
     override func viewDidAppear(animated: Bool) {

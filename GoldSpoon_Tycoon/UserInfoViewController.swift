@@ -20,7 +20,6 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLoca
     @IBOutlet var userProfileImage: UIImageView!
     @IBOutlet var userNameLabel: UILabel!
 
-    @IBOutlet var userTotalValueLabel: UILabel!
     @IBOutlet var userCashBalanceLabel: UILabel!
     @IBOutlet var userDailyProfitLabel: UILabel!
     @IBOutlet var userPropertyValueLabel: UILabel!
@@ -40,7 +39,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLoca
         set {
             UserInfo.latitude = newValue
             print(UserInfo.latitude)
-            locationManager.startUpdatingLocation()
+            locationManager.stopUpdatingLocation()
         }
     }
     var longitude: String {
@@ -50,7 +49,7 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLoca
         set {
             UserInfo.longitude = newValue
             print(UserInfo.longitude)
-            locationManager.startUpdatingLocation()
+            locationManager.stopUpdatingLocation()
         }
     }
 
@@ -125,7 +124,6 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLoca
         
         userProfileImage.image = UIImage(named: "Unknown_user")
         userNameLabel.text = "로그인 하세요"
-        userTotalValueLabel.text = "총 재산"
         userCashBalanceLabel.text = "통장 잔고"
         userDailyProfitLabel.text = "일일 수익"
         userPropertyValueLabel.text = "건물 규모"
@@ -162,7 +160,6 @@ class UserInfoViewController: UIViewController, FBSDKLoginButtonDelegate, CLLoca
                     
                     let jsonFromServer = JSON(data: response.data!)
                     
-                    self.userTotalValueLabel.text = self.numberToWon(jsonFromServer["totalValue"].doubleValue)
                     self.userCashBalanceLabel.text = self.numberToWon(jsonFromServer["cashBalance"].doubleValue)
                     self.userDailyProfitLabel.text = self.numberToWon(Double(String(format: "%.0f", jsonFromServer["dailyProfit"].doubleValue))!)
                     self.userPropertyValueLabel.text = self.numberToWon(jsonFromServer["propertyValue"].doubleValue)
